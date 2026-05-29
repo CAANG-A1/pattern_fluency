@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6: Make It Yours — Pattern Fluency</title>
+  <link rel="stylesheet" href="/pattern_fluency/css/style.css">
+</head>
+<body>
+<button class="mobile-toggle" id="mobile-toggle">☰</button>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="site-wrapper">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="/pattern_fluency/index.html" class="wordmark">Pattern Fluency</a>
+      <span class="sub">Power BI · Volume 1</span>
+    </div>
+    <div class="sidebar-nav">
+      <div class="nav-section"><div class="nav-section-label">Start Here</div></div>
+      <a href="/pattern_fluency/index.html" class="nav-link">Home</a>
+      <a href="/pattern_fluency/philosophy.html" class="nav-link">The Method</a>
+      <a href="/pattern_fluency/reference.html" class="nav-link">Quick Reference</a>
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 1 — Seeing Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-1.html" class="nav-link"><span class="num">01</span>Answer Your First Question</a>
+<a href="/pattern_fluency/lessons/lesson-2.html" class="nav-link"><span class="num">02</span>Different Pictures</a>
+<a href="/pattern_fluency/lessons/lesson-3.html" class="nav-link"><span class="num">03</span>Your Data Has a Shape</a>
+<a href="/pattern_fluency/lessons/lesson-4.html" class="nav-link"><span class="num">04</span>Filters Change the Question</a>
+<a href="/pattern_fluency/lessons/lesson-5.html" class="nav-link"><span class="num">05</span>One Number Tells a Story</a>
+<a href="/pattern_fluency/lessons/lesson-6.html" class="nav-link active"><span class="num">06</span>Make It Yours</a>
+<a href="/pattern_fluency/lessons/lesson-7.html" class="nav-link"><span class="num">07</span>Share What You See</a>
+<a href="/pattern_fluency/lessons/lesson-8.html" class="nav-link"><span class="num">08</span>Capstone</a>
+
+    </div>
+    <div class="sidebar-footer">Pattern Fluency Method · v1.0</div>
+  </nav>
+  <main class="main-content">
+    <div class="topbar">
+      <div class="topbar-breadcrumb">Volume 1 <span>/ Lesson 6</span></div>
+      <div class="progress-indicator"><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot current"></div><div class="progress-dot"></div><div class="progress-dot"></div></div>
+    </div>
+    <div class="page-hero">
+      <div class="hero-eyebrow">Lesson 6 of 8</div>
+      <h1>Make It Yours</h1>
+    </div>
+    <div class="belief-strip">
+      <div class="belief-card current">
+        <div class="belief-label">Before This Lesson</div>
+        <div class="belief-text">Reports look however they look. Formatting is decoration.</div>
+      </div>
+      <div class="belief-arrow">→</div>
+      <div class="belief-card target">
+        <div class="belief-label">After This Lesson</div>
+        <div class="belief-text">Every design choice communicates something. Formatting is meaning.</div>
+      </div>
+    </div>
+    <div class="lesson-body">
+      
+<h2>Welcome Back</h2>
+<p>You've built charts. Applied filters. Built cards. By now your canvas probably has things scattered across it — different sizes, different colors, labels that say "Sum of Count of Name."</p>
+<p>Today we clean it up. But not for the reasons you might think.</p>
+<p>We're not cleaning it up because it should look professional. We're cleaning it up because <strong>a report that's hard to read doesn't get read.</strong> Design isn't decoration. Design is communication.</p>
+
+<h2>Before We Open Power BI</h2>
+<div class="stop-think">
+  <div class="label">Your Audience</div>
+  <p>Think about the specific person who will read your report. Not "leadership in general" — someone specific. Write down: Who is this person? What question are they trying to answer? How much time will they spend on this report? What would confuse them?</p>
+  <p>Keep these answers in front of you. Every design decision today is made for this person.</p>
+</div>
+
+<h2>Step 1 — Fix Your Labels</h2>
+<p>Open Power BI. Open the report you've been building. Look at every label on every visual. Do any say things like "Count of Name" or "Sum of Budget_FY24_Final_v3"? Those are Power BI's defaults. Accurate but meaningless to anyone who didn't build the report.</p>
+<div class="step-block">
+  <div class="step-header">Changing a Title</div>
+  <div class="step-content">
+    <p>Click on a chart. Find the <span class="step-action">Format</span> panel (paint roller icon on the right). Find the title section. Change the title to a plain English question or statement.</p>
+    <p>Instead of: "Count of Name by Unit" → Write: "Headcount by Unit" or "How many people are in each unit?"</p>
+    <p>Do this for every visual on your page.</p>
+  </div>
+</div>
+
+<h2>Step 2 — Align and Arrange</h2>
+<div class="coach-pause">
+  <div class="label">The Newspaper Rule</div>
+  <p>Most people read left to right, top to bottom. Put the most important information at the top left. Put supporting detail below or to the right. Your cards — the key numbers — go at the top. Your charts — the detail — go below. What's most important should be easiest to find.</p>
+</div>
+<p>Resize your visuals so they fit clearly on the page. No overlapping. No visuals hanging off the edge. Consistent spacing between elements.</p>
+
+<h2>Step 3 — Use Color With Intention</h2>
+<p>Look at the colors on your canvas. Does anything jump out? Good — that thing should be important. If nothing jumps out, everything has equal visual weight. That's a problem.</p>
+<p>If everything is colorful, nothing is important. If one thing is colorful, that thing matters. Pick the most important visual on your page. Give it a slightly stronger color or a border. Leave everything else neutral.</p>
+
+<h2>Step 4 — Add a Slicer</h2>
+<div class="step-block">
+  <div class="step-header">Building a Slicer</div>
+  <div class="step-content">
+    <p>Click on an empty area of the canvas. In the Visualizations panel, find the slicer icon (it looks like a funnel). Click it.</p>
+    <p>Drag a category column into it — something your audience would want to filter by. Unit, Rank, Status, Training Complete.</p>
+    <p>Click one of the values. Watch everything on the page shift. Your audience now controls the focus. You're not just building a report — you're building a tool.</p>
+  </div>
+</div>
+
+<h2>Drill #6</h2>
+<div class="drill-block">
+  <div class="drill-header"><span class="icon">▶</span> The Audience Drill</div>
+  <p>Add a slicer to your page. Click each value. Watch the page respond. Click multiple values at once. Clear the slicer. Watch the page return to its full view.</p>
+  <p>Do this three times — but do it as your audience would. You're learning what it feels like to use this report, not just to build it.</p>
+</div>
+
+<h2>Reflection</h2>
+<ol class="numbered-list">
+  <li><span class="n">01</span>What label change made the biggest difference?</li>
+  <li><span class="n">02</span>What did you remove from the canvas — and why?</li>
+  <li><span class="n">03</span>What color did you use to draw attention to the most important visual?</li>
+  <li><span class="n">04</span>How does the slicer change the experience of using the report?</li>
+  <li><span class="n">05</span>If your specific person had 30 seconds with this report, what would they understand?</li>
+</ol>
+
+<h2>Challenge</h2>
+<p>Show your report to one real person. Don't explain it. Just let them look at it. After 30 seconds, ask: "What does this tell you?" Then ask: "What's confusing?" Fix the one thing that confused them most. Redesign is part of design.</p>
+
+<h2>Teach Back</h2>
+<p>Explain why labels matter more than people think. Explain what a slicer is and how it's different from a filter. Explain how you decide where to put things on the canvas. Explain how you use color to show what matters most.</p>
+
+<h2>Common Mistakes</h2>
+<div class="mistake-block"><strong>Mistake 1 — Keeping the default labels</strong><p>Changing labels takes two minutes and makes the report ten times more readable. Always change them.</p></div>
+<div class="mistake-block"><strong>Mistake 2 — Making everything colorful</strong><p>When every chart has a different color scheme, nothing stands out. Use color sparingly. One accent color for what matters most. Neutral for everything else.</p></div>
+<div class="mistake-block"><strong>Mistake 3 — Building for yourself instead of your audience</strong><p>You know what everything means because you built it. Read every label as if you've never seen this data before. If you wouldn't understand it cold, neither will they.</p></div>
+<div class="mistake-block"><strong>Mistake 4 — Never testing with a real person</strong><p>You cannot proofread your own report effectively. Show it to someone. Listen to what confuses them. That confusion is your design problem to solve.</p></div>
+
+<div class="homework-block">
+  <div class="hw-label">Homework</div>
+  <p>Finalize the report you've been building. Apply everything from this lesson: plain English labels on every visual, logical arrangement (most important at top left), color used to highlight one thing, at least one slicer, tested with one real person. Save the file — this is the report you'll share in Lesson 7.</p>
+</div>
+
+<div class="summary-block">
+  <div class="sum-label">Lesson Summary</div>
+  <p>Before this lesson, formatting was decoration.</p>
+  <p>After this lesson, every design choice is a communication decision. Labels tell your audience what question is being answered. Arrangement tells them where to look first. Color tells them what matters most. Slicers give them control.</p>
+  <p>In Lesson 7, you're going to share it — because a report no one else can see hasn't done its job yet.</p>
+</div>
+
+    </div>
+    <div class="lesson-nav-footer"><a href="/pattern_fluency/lessons/lesson-5.html" class="nav-btn">← Lesson 5</a><a href="/pattern_fluency/lessons/lesson-7.html" class="nav-btn primary">Lesson 7 →</a></div>
+  </main>
+</div>
+<script src="/pattern_fluency/js/main.js"></script>
+</body>
+</html>
