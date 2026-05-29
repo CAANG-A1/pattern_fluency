@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 3: Your Data Has a Shape — Pattern Fluency</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<button class="mobile-toggle" id="mobile-toggle">☰</button>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="site-wrapper">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="../index.html" class="wordmark">Pattern Fluency</a>
+      <span class="sub">Power BI · Volume 1</span>
+    </div>
+    <div class="sidebar-nav">
+      <div class="nav-section"><div class="nav-section-label">Start Here</div></div>
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="../philosophy.html" class="nav-link">The Method</a>
+      <a href="../reference.html" class="nav-link">Quick Reference</a>
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 1 — Seeing Data</div></div>
+      <a href="lesson-1.html" class="nav-link"><span class="num">01</span>Answer Your First Question</a>
+<a href="lesson-2.html" class="nav-link"><span class="num">02</span>Different Pictures</a>
+<a href="lesson-3.html" class="nav-link active"><span class="num">03</span>Your Data Has a Shape</a>
+<a href="lesson-4.html" class="nav-link"><span class="num">04</span>Filters Change the Question</a>
+<a href="lesson-5.html" class="nav-link"><span class="num">05</span>One Number Tells a Story</a>
+<a href="lesson-6.html" class="nav-link"><span class="num">06</span>Make It Yours</a>
+<a href="lesson-7.html" class="nav-link"><span class="num">07</span>Share What You See</a>
+<a href="lesson-8.html" class="nav-link"><span class="num">08</span>Capstone</a>
+
+    </div>
+    <div class="sidebar-footer">Pattern Fluency Method · v1.0</div>
+  </nav>
+  <main class="main-content">
+    <div class="topbar">
+      <div class="topbar-breadcrumb">Volume 1 <span>/ Lesson 3</span></div>
+      <div class="progress-indicator"><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot current"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div></div>
+    </div>
+    <div class="page-hero">
+      <div class="hero-eyebrow">Lesson 3 of 8</div>
+      <h1>Your Data Has a Shape</h1>
+    </div>
+    <div class="belief-strip">
+      <div class="belief-card current">
+        <div class="belief-label">Before This Lesson</div>
+        <div class="belief-text">Data is rows and columns. That's all it is.</div>
+      </div>
+      <div class="belief-arrow">→</div>
+      <div class="belief-card target">
+        <div class="belief-label">After This Lesson</div>
+        <div class="belief-text">Data has a structure that determines what questions I can ask.</div>
+      </div>
+    </div>
+    <div class="lesson-body">
+      
+<h2>Welcome Back</h2>
+<p>Lessons 1 and 2 taught you two things: Power BI answers questions, and different charts answer different questions better. Today we go one level deeper.</p>
+<p>Before you can ask the right question, you need to understand your data. Not what's in it — how it's built. This is the lesson that changes how you look at every spreadsheet you'll ever see.</p>
+
+<h2>Before We Open Power BI</h2>
+<p>Look at these two spreadsheets.</p>
+
+<table class="data-table">
+  <thead><tr><th>Name</th><th>Rank</th><th>Unit</th><th>Training Complete</th></tr></thead>
+  <tbody>
+    <tr><td>Smith</td><td>TSgt</td><td>129</td><td>Yes</td></tr>
+    <tr><td>Jones</td><td>MSgt</td><td>144</td><td>No</td></tr>
+    <tr><td>Brown</td><td>TSgt</td><td>129</td><td>Yes</td></tr>
+  </tbody>
+</table>
+
+<table class="data-table" style="margin-top:16px;">
+  <thead><tr><th>Unit</th><th>Total Personnel</th><th>Training Complete</th><th>Training Incomplete</th></tr></thead>
+  <tbody>
+    <tr><td>129</td><td>3</td><td>2</td><td>1</td></tr>
+    <tr><td>144</td><td>2</td><td>1</td><td>1</td></tr>
+  </tbody>
+</table>
+
+<div class="stop-think">
+  <div class="label">The Key Question</div>
+  <p>Same information. Different shape. Which spreadsheet can tell you <em>who specifically</em> hasn't completed training? Write your answer before reading on.</p>
+</div>
+
+<div class="coach-pause">
+  <div class="label">The Observation</div>
+  <p>Spreadsheet A can answer "Who hasn't completed training?" because it has names. Spreadsheet B can only answer "How many?" because the names are gone. The shape changed — and when the shape changed, some questions became impossible. <strong>The shape of your data determines what questions it can answer.</strong></p>
+</div>
+
+<h2>The Two Types of Columns</h2>
+<p>Every column in a spreadsheet is one of two things.</p>
+<p><strong>A category column</strong> groups things together. It contains words or labels. Examples: Unit, Rank, Status, Training Complete. Power BI uses these to group and filter.</p>
+<p><strong>A number column</strong> measures things. It contains quantities. Examples: Count, Budget, Days, Score. Power BI uses these to count, sum, and average.</p>
+
+<div class="coach-pause">
+  <div class="label">Watch Out</div>
+  <p>A number is not always a number column. Unit numbers like "129" and "144" are categories — they label, they don't measure. If you wouldn't add two values together and expect something meaningful, it's a category column.</p>
+</div>
+
+<h2>Step 1 — Label Your Columns</h2>
+<p>Open any spreadsheet you work with. For each column, write C (category) or N (number). Do this before opening Power BI. Take your time.</p>
+
+<h2>Step 2 — Predict Before You Build</h2>
+<p>Before opening Power BI, write: "If I drag [column name] into a chart, I predict Power BI will ___." Do this for three columns. Then import your spreadsheet and test your predictions.</p>
+
+<h2>Drill #3</h2>
+<div class="drill-block">
+  <div class="drill-header"><span class="icon">▶</span> The Prediction Drill</div>
+  <p>Drag a category column into a chart. Say out loud: "Power BI grouped by ___." Delete the chart.</p>
+  <p>Drag a number column. Say out loud: "Power BI added up ___." Delete the chart.</p>
+  <p>Drag both — category first, then number — to the same chart. Describe what happened. Repeat three times.</p>
+</div>
+
+<h2>The Question the Data Can't Answer</h2>
+<div class="stop-think">
+  <div class="label">Does It Feel Right?</div>
+  <p>Look at your spreadsheet. Are there questions you want to answer that this data can't support? What's missing — a column that doesn't exist? A category too broad? A number never recorded?</p>
+  <p>That gap between what you want to know and what your data can tell you — we'll learn to close it in Volume 2. For now, just notice it.</p>
+</div>
+
+<h2>Reflection</h2>
+<ol class="numbered-list">
+  <li><span class="n">01</span>What did you discover about your spreadsheet that you didn't notice before?</li>
+  <li><span class="n">02</span>Which columns are categories? Which are numbers?</li>
+  <li><span class="n">03</span>What question can your data answer that you hadn't thought to ask?</li>
+  <li><span class="n">04</span>What question can't your data answer — and why?</li>
+  <li><span class="n">05</span>How does seeing the structure change how you'd use this data?</li>
+</ol>
+
+<h2>Challenge</h2>
+<p>Find a different spreadsheet — one you've never analyzed. Without importing it: label every column C or N, write three questions it can answer, write one question it cannot answer and explain why. Then import it and verify your predictions.</p>
+
+<h2>Teach Back</h2>
+<p>Explain what a category column is and what Power BI does with it. Explain what a number column is. Explain why the shape of a spreadsheet determines what questions it can answer. Use your actual spreadsheet as the example.</p>
+
+<h2>Common Mistakes</h2>
+<div class="mistake-block"><strong>Mistake 1 — Assuming all numbers are number columns</strong><p>If a number labels or identifies something, it's a category. If it measures something, it's a number column.</p></div>
+<div class="mistake-block"><strong>Mistake 2 — Overlooking obvious columns</strong><p>Name and ID columns seem unimportant but are often what make individual-level questions answerable. Remove them and you lose the ability to ask "who."</p></div>
+<div class="mistake-block"><strong>Mistake 3 — Thinking more columns means better data</strong><p>A spreadsheet with 40 columns and no clear structure is harder to work with than one with 5 well-designed columns.</p></div>
+<div class="mistake-block"><strong>Mistake 4 — Skipping the prediction step</strong><p>Predicting before you drag is where your brain learns the rule. Skip it and you'll relearn it from experience every time.</p></div>
+
+<div class="homework-block">
+  <div class="hw-label">Homework</div>
+  <p>Take the spreadsheet you use most at work. Write: what does each row represent? Which columns are categories? Which are numbers? What is the best question this spreadsheet can answer? What question do you wish it could answer that it currently can't? Bring these answers to Lesson 4.</p>
+</div>
+
+<div class="summary-block">
+  <div class="sum-label">Lesson Summary</div>
+  <p>Before this lesson, data was rows and columns.</p>
+  <p>After this lesson, data has a shape — an arrangement of categories and numbers that determines exactly which questions are possible and which are not.</p>
+  <p>In Lesson 4, you'll learn to change what you're looking at without changing the data, using filters to ask sharper, more specific questions.</p>
+</div>
+
+    </div>
+    <div class="lesson-nav-footer"><a href="lesson-2.html" class="nav-btn">← Lesson 2</a><a href="lesson-4.html" class="nav-btn primary">Lesson 4 →</a></div>
+  </main>
+</div>
+<script src="../js/main.js"></script>
+</body>
+</html>
