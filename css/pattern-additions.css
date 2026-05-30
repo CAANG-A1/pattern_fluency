@@ -1,22 +1,39 @@
-/* Optional Pattern Fluency additions */
+/* Pattern Fluency additions — dark theme compatible */
+
 .pattern-card {
-  border: 1px solid #c7d2fe;
-  background: #eef2ff;
-  border-radius: 16px;
-  padding: 18px 20px;
-  margin: 22px 0;
+  border-left: 4px solid #f59e0b;
+  background: #1e3355;
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin: 24px 0;
+  color: #e2e8f0;
 }
+
 .pattern-card h3 {
-  margin-top: 4px;
+  color: #f59e0b;
+  margin-top: 8px;
+  margin-bottom: 14px;
 }
+
+.pattern-card p,
+.pattern-card li {
+  color: #e2e8f0;
+}
+
+.pattern-card ul,
+.pattern-card ol {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .pattern-label {
   display: inline-block;
-  font-size: 0.78rem;
+  background: rgba(245, 158, 11, .15);
+  color: #f59e0b;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: .75rem;
   font-weight: 700;
   letter-spacing: .04em;
   text-transform: uppercase;
-  color: #3730a3;
-  background: #e0e7ff;
-  border-radius: 999px;
-  padding: 4px 10px;
 }
