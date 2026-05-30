@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pattern Library — Pattern Fluency</title>
+  <link rel="stylesheet" href="/pattern_fluency/css/style.css">
+</head>
+<body>
+<button class="mobile-toggle" id="mobile-toggle">☰</button>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="site-wrapper">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="/pattern_fluency/index.html" class="wordmark">Pattern Fluency</a>
+      <span class="sub">Power BI · Volume 1</span>
+    </div>
+    <div class="sidebar-nav">
+      <div class="nav-section"><div class="nav-section-label">Start Here</div></div>
+      <a href="/pattern_fluency/index.html" class="nav-link">Home</a>
+      <a href="/pattern_fluency/philosophy.html" class="nav-link">The Method</a>
+      <a href="/pattern_fluency/reference.html" class="nav-link">Quick Reference</a>
+      <a href="/pattern_fluency/pattern-library.html" class="nav-link active">Pattern Library</a>
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 1 — Seeing Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-1.html" class="nav-link"><span class="num">01</span>Answer Your First Question</a>
+      <a href="/pattern_fluency/lessons/lesson-2.html" class="nav-link"><span class="num">02</span>Different Pictures</a>
+      <a href="/pattern_fluency/lessons/lesson-3.html" class="nav-link"><span class="num">03</span>Your Data Has a Shape</a>
+      <a href="/pattern_fluency/lessons/lesson-4.html" class="nav-link"><span class="num">04</span>Filters Change the Question</a>
+      <a href="/pattern_fluency/lessons/lesson-5.html" class="nav-link"><span class="num">05</span>One Number Tells a Story</a>
+      <a href="/pattern_fluency/lessons/lesson-6.html" class="nav-link"><span class="num">06</span>Make It Yours</a>
+      <a href="/pattern_fluency/lessons/lesson-7.html" class="nav-link"><span class="num">07</span>Share What You See</a>
+      <a href="/pattern_fluency/lessons/lesson-8.html" class="nav-link"><span class="num">08</span>Capstone</a>
+    </div>
+    <div class="sidebar-footer">Pattern Fluency Method · v1.0</div>
+  </nav>
+  <main class="main-content">
+    <div class="topbar">
+      <div class="topbar-breadcrumb">Start Here <span>/ Pattern Library</span></div>
+    </div>
+    <div class="page-hero">
+      <div class="hero-eyebrow">Pattern Fluency Reference</div>
+      <h1>Pattern Library</h1>
+    </div>
+    <div class="lesson-body">
+      <h2>Why This Page Exists</h2>
+      <p>Power BI is not just a collection of buttons. It is a set of repeatable patterns. When you recognize the pattern, you know what to do next.</p>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #1</div><h3>Group & Count</h3><p><strong>Use when:</strong> You need to know how many records are in each category.</p><p><strong>Recipe:</strong> Category → X-axis. Record identifier → Y-axis.</p></div>
+      <div class="pattern-card"><div class="pattern-label">Pattern #2</div><h3>Change the Lens</h3><p><strong>Use when:</strong> The same data may need a different visual to answer a different question.</p><p><strong>Recipe:</strong> Keep the data the same. Change the chart type. Ask what became easier or harder to see.</p></div>
+      <div class="pattern-card"><div class="pattern-label">Pattern #3</div><h3>Read the Shape</h3><p><strong>Use when:</strong> You receive data and need to know what questions it can support.</p><p><strong>Recipe:</strong> Identify category columns, identify number columns, then identify possible and impossible questions.</p></div>
+      <div class="pattern-card"><div class="pattern-label">Pattern #4</div><h3>Filter = New Question</h3><p><strong>Use when:</strong> You want to focus the answer on one part of the data.</p><p><strong>Recipe:</strong> Start with a broad chart. Apply a filter. Restate the focused question.</p></div>
+      <div class="pattern-card"><div class="pattern-label">Pattern #5</div><h3>One Number Answer</h3><p><strong>Use when:</strong> One number answers the most important question in the room.</p><p><strong>Recipe:</strong> Build a card, verify the calculation, then read it as a sentence.</p></div>
+      <div class="pattern-card"><div class="pattern-label">Pattern #6</div><h3>Design for the Reader</h3><p><strong>Use when:</strong> Your report needs to be understood by someone who did not build it.</p><p><strong>Recipe:</strong> Plain-English labels, logical layout, intentional color, and useful slicers.</p></div>
+      <div class="pattern-card"><div class="pattern-label">Pattern #7</div><h3>Publish, Test, Improve</h3><p><strong>Use when:</strong> Your report needs to leave your computer and be used by another person.</p><p><strong>Recipe:</strong> Publish, test, share, ask what the report communicates, then improve it.</p></div>
+      <div class="pattern-card"><div class="pattern-label">Pattern #8</div><h3>Build the Full Loop</h3><p><strong>Use when:</strong> You are ready to turn a real question into a useful report.</p><p><strong>Recipe:</strong> Question → Data → Visuals → Design → Publish → Feedback → Present.</p></div>
+
+      <h2>Spot the Pattern Practice</h2>
+      <div class="step-block">
+        <div class="step-header">Scenario Practice</div>
+        <div class="step-content">
+          <p><strong>Scenario:</strong> Your commander asks, "Which unit has the most overdue training?"</p>
+          <p><strong>Start with:</strong> Pattern #1, Group & Count. Then use Pattern #3 to confirm the data supports the question, and Pattern #4 if you need to focus on one training type.</p>
+          <p><strong>Scenario:</strong> Your audience already knows totals, but they are arguing about percentages.</p>
+          <p><strong>Start with:</strong> Pattern #2, Change the Lens.</p>
+          <p><strong>Scenario:</strong> You open a spreadsheet and cannot tell what questions it can answer.</p>
+          <p><strong>Start with:</strong> Pattern #3, Read the Shape.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="/pattern_fluency/js/main.js"></script>
+</body>
+</html>

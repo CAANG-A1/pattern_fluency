@@ -1,0 +1,22 @@
+/* Optional Pattern Fluency additions */
+.pattern-card {
+  border: 1px solid #c7d2fe;
+  background: #eef2ff;
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin: 22px 0;
+}
+.pattern-card h3 {
+  margin-top: 4px;
+}
+.pattern-label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #3730a3;
+  background: #e0e7ff;
+  border-radius: 999px;
+  padding: 4px 10px;
+}

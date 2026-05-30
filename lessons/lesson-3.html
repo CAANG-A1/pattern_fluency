@@ -20,6 +20,7 @@
       <a href="/pattern_fluency/index.html" class="nav-link">Home</a>
       <a href="/pattern_fluency/philosophy.html" class="nav-link">The Method</a>
       <a href="/pattern_fluency/reference.html" class="nav-link">Quick Reference</a>
+      <a href="/pattern_fluency/pattern-library.html" class="nav-link">Pattern Library</a>
       <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 1 — Seeing Data</div></div>
       <a href="/pattern_fluency/lessons/lesson-1.html" class="nav-link"><span class="num">01</span>Answer Your First Question</a>
 <a href="/pattern_fluency/lessons/lesson-2.html" class="nav-link"><span class="num">02</span>Different Pictures</a>
@@ -54,6 +55,14 @@
       </div>
     </div>
     <div class="lesson-body">
+      
+<div class="pattern-card">
+  <div class="pattern-label">Pattern #3</div>
+  <h3>Read the Shape</h3>
+  <p><strong>Question:</strong> What can this data answer, and what can it not answer?</p>
+  <p><strong>Recipe:</strong> Identify categories, identify numbers, then identify the questions the structure supports.</p>
+</div>
+
       
 <h2>Welcome Back</h2>
 <p>Lessons 1 and 2 taught you two things: Power BI answers questions, and different charts answer different questions better. Today we go one level deeper.</p>
@@ -105,33 +114,27 @@
 <h2>Step 2 — Predict Before You Build</h2>
 <p>Before opening Power BI, write:</p>
 <p><strong>"If I place [column name] in the X-axis, I predict Power BI will group the data by ____."</strong></p>
-<p>Do this for three columns.</p>
-<p>Then import your spreadsheet and test your predictions.</p>
-
-<div class="coach-pause">
-  <div class="label">The Goal</div>
-  <p>You are learning to predict Power BI's behavior before you build.</p>
-  <p>That's the difference between clicking and understanding.</p>
-</div>
+<p>Do this for three columns. Then import your spreadsheet and test your predictions.</p>
 
 <h2>Drill #3</h2>
 <div class="drill-block">
   <div class="drill-header"><span class="icon">▶</span> The Prediction Drill</div>
-  <p>Click a blank area of the canvas.</p>
-  <p>Select a bar chart.</p>
+  <p>Click a blank area of the canvas and select a bar chart.</p>
   <p>Place a category column such as <strong>Unit</strong>, <strong>Rank</strong>, or <strong>Training Complete</strong> into the <strong>X-axis</strong>.</p>
-  <p>Place a field that identifies each record, such as <strong>Name</strong>, into the <strong>Y-axis</strong>.</p>
-  <p>Power BI should count the records and build the chart.</p>
-  <p>Say out loud: <strong>"Power BI grouped by ____ and counted ____."</strong></p>
+  <p>Place a record-identifying column such as <strong>Name</strong> into the <strong>Y-axis</strong>.</p>
+  <p>Say out loud: <strong>"Power BI grouped by ___ and counted ___."</strong></p>
   <p>Delete the chart.</p>
-  <p>Repeat using a different category column.</p>
-  <p>Do this three times.</p>
+  <p>Repeat using a different category column. Do this three times.</p>
 </div>
 
 <div class="stop-think">
-  <div class="label">If Nothing Happens</div>
-  <p>Check the field wells. A category field should be in the <strong>X-axis</strong>. A field to count or measure should be in the <strong>Y-axis</strong>.</p>
-  <p>Most beginner problems happen because a field landed in the wrong box.</p>
+  <div class="label">If the Chart Does Not Show Anything</div>
+  <p>Check the field boxes before you assume something is broken.</p>
+  <ol>
+    <li>Is a chart selected?</li>
+    <li>Is your category field in the <strong>X-axis</strong>?</li>
+    <li>Is <strong>Name</strong> or another record-identifying field in the <strong>Y-axis</strong>?</li>
+  </ol>
 </div>
 
 <h2>The Question the Data Can't Answer</h2>

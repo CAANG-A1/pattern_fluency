@@ -20,6 +20,7 @@
       <a href="/pattern_fluency/index.html" class="nav-link">Home</a>
       <a href="/pattern_fluency/philosophy.html" class="nav-link">The Method</a>
       <a href="/pattern_fluency/reference.html" class="nav-link">Quick Reference</a>
+      <a href="/pattern_fluency/pattern-library.html" class="nav-link">Pattern Library</a>
       <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 1 — Seeing Data</div></div>
       <a href="/pattern_fluency/lessons/lesson-1.html" class="nav-link active"><span class="num">01</span>Answer Your First Question</a>
 <a href="/pattern_fluency/lessons/lesson-2.html" class="nav-link"><span class="num">02</span>Different Pictures</a>
@@ -54,6 +55,14 @@
       </div>
     </div>
     <div class="lesson-body">
+      
+<div class="pattern-card">
+  <div class="pattern-label">Pattern #1</div>
+  <h3>Group & Count</h3>
+  <p><strong>Question:</strong> How many are in each category?</p>
+  <p><strong>Recipe:</strong> Category → X-axis. Record identifier → Y-axis.</p>
+</div>
+
       
 <h2>Welcome</h2>
 <p>For the next 30 minutes, forget Power BI. Forget dashboards, data models, analytics, and every intimidating word you've probably heard attached to this software.</p>
@@ -121,46 +130,45 @@
 
 <h2>Step 4 — Build the Chart</h2>
 <p>Look to the right side of the screen. You should see the column names from your spreadsheet.</p>
-<p>Click somewhere in the blank white area of the canvas.</p>
-<p>Find the chart icon that looks like vertical bars and click it.</p>
-<p>An empty chart appears.</p>
+<p>Click somewhere in the blank white area. Find the chart icon that looks like vertical bars. This is usually called a <strong>clustered column chart</strong>. Click it. An empty chart appears.</p>
 
 <div class="step-block">
-  <div class="step-header">Build the Chart</div>
+  <div class="step-header">Build the Chart Using the Axis Boxes</div>
   <div class="step-content">
-    <p>Look underneath the chart.</p>
-    <p>You should see boxes labeled:</p>
-    <ul>
-      <li>X-axis</li>
-      <li>Y-axis</li>
-    </ul>
-    <p>Drag <strong>Unit</strong> into the <strong>X-axis</strong>.</p>
-    <p>Drag <strong>Name</strong> into the <strong>Y-axis</strong>.</p>
-    <p>Power BI should automatically count the names and display a chart showing how many people belong to each unit.</p>
+    <p>With the empty chart selected, look for the boxes where Power BI asks what to put in the visual.</p>
+    <p>You should see areas such as <span class="step-action">X-axis</span> and <span class="step-action">Y-axis</span>. Depending on your version of Power BI, the wording may look slightly different.</p>
+    <p>Drag your category column into the <span class="step-action">X-axis</span> box.</p>
+    <p>For this first lesson, drag <strong>Unit</strong> into the X-axis.</p>
+    <p>Then drag a column you want Power BI to count into the <span class="step-action">Y-axis</span> box.</p>
+    <p>For this first lesson, drag <strong>Name</strong> into the Y-axis. Power BI should count the names and show how many records belong to each unit.</p>
   </div>
+</div>
+
+<div class="pattern-card">
+  <div class="pattern-label">Pattern #1</div>
+  <h3>Group & Count</h3>
+  <p><strong>Question:</strong> How many are in each category?</p>
+  <p><strong>Recipe:</strong> Category → X-axis. Record identifier → Y-axis.</p>
+  <p><strong>Example:</strong> Unit → X-axis. Name → Y-axis. Power BI counts people by unit.</p>
+</div>
+
+<div class="stop-think">
+  <div class="label">If Nothing Appears</div>
+  <p>Don't panic. This usually means Power BI does not yet know what should go on the X-axis and what should go on the Y-axis.</p>
+  <p>Check three things:</p>
+  <ol>
+    <li>Is the column chart selected?</li>
+    <li>Is <strong>Unit</strong> in the <strong>X-axis</strong> box?</li>
+    <li>Is <strong>Name</strong> in the <strong>Y-axis</strong> box?</li>
+  </ol>
+  <p>Most beginner issues happen because a field is sitting in the wrong box. That's not failure. That's Power BI asking you to be more specific.</p>
 </div>
 
 <div class="coach-pause">
   <div class="label">The Moment</div>
-  <p>You just gave Power BI two instructions:</p>
-  <ul>
-    <li>Group the data by Unit.</li>
-    <li>Count how many records exist in each Unit.</li>
-  </ul>
-  <p>You didn't write a formula. You didn't perform any calculations manually. You simply told Power BI how to organize the information.</p>
-  <p>Now answer the question you wrote down at the beginning.</p>
-  <p><strong>The chart is the vehicle. The answer is the destination.</strong></p>
-</div>
-
-<div class="stop-think">
-  <div class="label">If Nothing Happens</div>
-  <ol>
-    <li>Did you select a chart first?</li>
-    <li>Did you place Unit in the X-axis?</li>
-    <li>Did you place Name in the Y-axis?</li>
-    <li>Does Power BI show an error message?</li>
-  </ol>
-  <p>Most beginner problems happen because a field was placed in the wrong box.</p>
+  <p>You just told Power BI: <strong>group by this category and count the records.</strong></p>
+  <p>Did you write a formula? No. Did you go back to Excel and count manually? No. Power BI grouped the data and summarized it for you.</p>
+  <p>Now answer the question you wrote down at the beginning. <strong>The chart is the vehicle. The answer is the destination. Never mix those up.</strong></p>
 </div>
 
 <h2>Drill #1</h2>
@@ -180,7 +188,12 @@
 </ol>
 
 <h2>Challenge</h2>
-<p>Pick a different column from your data. Build a chart for it. Ask yourself: what question does this chart answer? Write the question down <em>after</em> you build the chart — not before. No instructions. Just do it.</p>
+<p>Pick a different category column from your data.</p>
+<p>Create a new chart.</p>
+<p>Place the category column in the <strong>X-axis</strong>.</p>
+<p>Place <strong>Name</strong> in the <strong>Y-axis</strong>.</p>
+<p>Ask yourself: what question does this chart answer?</p>
+<p>Write the question down <em>after</em> you build the chart — not before. No instructions. Just do it.</p>
 
 <h2>Teach Back</h2>
 <p>Pretend your coworker is standing next to you. They've never opened Power BI. Explain what you did, what Power BI did automatically, what question your chart answers, and why that matters. Plain language only. No technical terms.</p>
@@ -189,7 +202,7 @@
 <div class="mistake-block"><strong>Mistake 1 — Starting with the tool instead of the question</strong><p>People click around until something looks right. That's decoration, not analysis. Always start with the question.</p></div>
 <div class="mistake-block"><strong>Mistake 2 — Using data you don't care about</strong><p>You'll learn faster and remember longer when the data means something to you. Sample data is the last resort.</p></div>
 <div class="mistake-block"><strong>Mistake 3 — Skipping the repetition</strong><p>Three times feels unnecessary. It isn't. Your brain needs the motion to feel routine before it can feel easy.</p></div>
-<div class="mistake-block"><strong>Mistake 4 — Moving on while confused</strong><p>If the chart didn't appear, stop here. Do not proceed to Lesson 2. Fix it first. Confusion carried forward becomes a wall.</p></div>
+<div class="mistake-block"><strong>Mistake 4 — Moving on while confused</strong><p>If the chart didn't appear, stop here. Do not proceed to Lesson 2. Check the X-axis and Y-axis boxes first. Fix it before moving on. Confusion carried forward becomes a wall.</p></div>
 
 <div class="homework-block">
   <div class="hw-label">Homework</div>
