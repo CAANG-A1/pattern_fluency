@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lesson 5: One Number Tells a Story — Pattern Fluency</title>
   <link rel="stylesheet" href="/pattern_fluency/css/style.css">
+  <link rel="stylesheet" href="/pattern_fluency/css/pattern-additions.css">
 </head>
 <body>
 <button class="mobile-toggle" id="mobile-toggle">☰</button>
@@ -56,98 +57,239 @@
     </div>
     <div class="lesson-body">
       
-<div class="pattern-card">
-  <div class="pattern-label">Pattern #5</div>
-  <h3>One Number Answer</h3>
-  <p><strong>Question:</strong> What is the one number the audience needs first?</p>
-  <p><strong>Recipe:</strong> Build a card, verify the calculation, then read the number as a sentence.</p>
+
+<h2>Welcome Back</h2>
+<p>So far, you've learned four patterns.</p>
+<p><strong>Pattern #1: Group &amp; Count</strong> helped you answer how many records are in each category.</p>
+<p><strong>Pattern #2: Change the Lens</strong> helped you choose the visual that explains the answer most clearly.</p>
+<p><strong>Pattern #3: Read the Shape</strong> helped you understand what your data can and cannot answer.</p>
+<p><strong>Pattern #4: Filter = New Question</strong> helped you focus broad questions into specific questions.</p>
+<p>Every lesson so far has leaned heavily on charts.</p>
+<p>Today we talk about something different: a single number.</p>
+<p>Not a chart. Not a table. One number on a page.</p>
+
+<div class="coach-pause">
+  <div class="label">The Surprise</div>
+  <p>Sometimes the best chart is no chart at all.</p>
+  <p>Sometimes the clearest answer is one number, placed where the audience can see it immediately.</p>
 </div>
 
-      
-<h2>Welcome Back</h2>
-<p>Every lesson so far has been about charts. Today we talk about something different: a single number. Not a chart. Not a table. One number on a page.</p>
-<p>In Power BI, this is called a card visual. And in the right context, it's the most powerful thing on the page.</p>
-<p>Think about the last briefing you sat in. At some point, someone said a number and the room shifted. "We're at 73% readiness." "12 people haven't completed mandatory training." Those weren't charts. Those were numbers. And they changed the conversation.</p>
+<p>In Power BI, this is called a card visual.</p>
+<p>And in the right context, it can be the most powerful thing on the page.</p>
+<p>Think about the last briefing you sat in. At some point, someone said a number and the room shifted.</p>
+<p>"We're at 73% readiness."</p>
+<p>"12 people haven't completed mandatory training."</p>
+<p>"We have 4 overdue actions."</p>
+<p>Those weren't charts.</p>
+<p>Those were numbers.</p>
+<p>And they changed the conversation.</p>
 
 <h2>Before We Open Power BI</h2>
 <div class="stop-think">
   <div class="label">The Most Important Number</div>
-  <p>What is the single most important number you could pull from your data? Not the most interesting chart — the number that, if someone saw it, would immediately understand something important. Write it down before you open anything.</p>
+  <p>What is the single most important number you could pull from your data?</p>
+  <p>Not the most interesting chart.</p>
+  <p>Not the most detailed table.</p>
+  <p>The number that, if someone saw it, would immediately understand something important.</p>
+  <p>Write it down before you open anything.</p>
 </div>
 
 <h2>Step 1 — Build a Card Visual</h2>
 <div class="step-block">
   <div class="step-header">Building the Card</div>
   <div class="step-content">
-    <p>Click on an empty area of the canvas. In the Visualizations panel, find the card icon — it looks like a square with a number inside. Click it.</p>
-    <p>Drag the column that contains your number into the card. Look at what appears. Is it the number you expected?</p>
+    <p>Click on an empty area of the canvas.</p>
+    <p>In the Visualizations panel, find the card icon. It usually looks like a square with a number inside.</p>
+    <p>Click it.</p>
+    <p>Drag the column that contains your number into the card.</p>
+    <p>Look at what appears.</p>
+    <p><strong>Is it the number you expected?</strong></p>
+
     <div class="stop-think">
       <div class="label">Power BI Makes Assumptions</div>
-      <p>Power BI will automatically choose a calculation. Sometimes it chooses <strong>Count</strong>. Sometimes it chooses <strong>Sum</strong>. Sometimes it chooses something else.</p>
+      <p>Power BI will automatically choose a calculation.</p>
+      <p>Sometimes it chooses <strong>Count</strong>.</p>
+      <p>Sometimes it chooses <strong>Sum</strong>.</p>
+      <p>Sometimes it chooses something else.</p>
       <p>Always verify that the card is showing the number you intended.</p>
     </div>
   </div>
+</div>
+
+<div class="coach-pause">
+  <div class="label">If You Only Have Category Columns</div>
+  <p>That's okay.</p>
+  <p>You can still build useful cards.</p>
+  <p>If your data has names, statuses, units, ranks, or training categories, use <strong>Count</strong>.</p>
+  <p>Example: placing <strong>Name</strong> in a card can show the total number of people.</p>
+  <p>Example: placing <strong>Status</strong> in a card can count how many records have a status.</p>
 </div>
 
 <h2>Step 2 — Control What the Card Shows</h2>
 <div class="step-block">
   <div class="step-header">Choosing the Calculation</div>
   <div class="step-content">
-    <p>Click the card. In the Fields panel, look for the dropdown arrow next to your field. Click it. Choose the right option:</p>
-    <p><strong>Count</strong> — how many rows have a value. <strong>Count (Distinct)</strong> — how many unique values exist. <strong>Sum</strong> — add all values together. <strong>Average</strong> — the mean.</p>
+    <p>Click the card.</p>
+    <p>In the Fields or Visualizations area, look for the dropdown arrow next to your field.</p>
+    <p>Click it.</p>
+    <p>Choose the option that matches your question:</p>
+
+    <ul>
+      <li><strong>Count</strong> — how many rows have a value.</li>
+      <li><strong>Count (Distinct)</strong> — how many unique values exist.</li>
+      <li><strong>Sum</strong> — add all values together.</li>
+      <li><strong>Average</strong> — calculate the mean.</li>
+    </ul>
   </div>
 </div>
 
 <div class="coach-pause">
   <div class="label">The Meaning Check</div>
-  <p>Before you move on, read the card out loud as a sentence: "There are [number] [thing]." Does that sentence answer your question? If yes, the card is right. If no, change the calculation type until the sentence is true. Do this every single time.</p>
+  <p>Before you move on, read the card out loud as a sentence:</p>
+  <p><strong>"There are [number] [thing]."</strong></p>
+  <p>Does that sentence answer your question?</p>
+  <p>If yes, the card is right.</p>
+  <p>If no, change the calculation type until the sentence is true.</p>
+  <p>Do this every single time.</p>
+</div>
+
+<div class="coach-pause">
+  <div class="label">What You Just Learned</div>
+  <p>You may think you just learned how to build a card visual.</p>
+  <p>You didn't.</p>
+  <p>You learned how to identify the single answer that matters most.</p>
+  <p>Sometimes a chart is unnecessary.</p>
+  <p>Sometimes the answer is a number.</p>
+</div>
+
+<div class="pattern-card">
+  <div class="pattern-label">Pattern #5</div>
+  <h3>One Number Answer</h3>
+  <p><strong>Question:</strong> What is the one number the audience needs first?</p>
+  <p><strong>Recipe:</strong></p>
+  <ul>
+    <li>Identify the most important question.</li>
+    <li>Build a card visual.</li>
+    <li>Choose the correct calculation.</li>
+    <li>Read the card as a sentence.</li>
+    <li>Label it so someone else understands it instantly.</li>
+  </ul>
+  <p>One number is not decoration.</p>
+  <p>One number is an answer.</p>
 </div>
 
 <h2>Step 3 — The Three-Piece View</h2>
-<p>On a clean canvas, build three cards side by side. Each card answers a different question about your data. Examples: Total headcount. People who completed training. People who have not completed training.</p>
-<p>Look at the three cards together. Someone can walk in, see those three numbers, and understand the situation in under 10 seconds. That's the goal of a card visual — not detail, not depth, but immediate understanding.</p>
+<p>On a clean canvas, build three cards side by side.</p>
+<p>Each card should answer a different question about your data.</p>
+<p>Examples:</p>
+<ul>
+  <li>Total headcount</li>
+  <li>People who completed training</li>
+  <li>People who have not completed training</li>
+</ul>
+<p>Look at the three cards together.</p>
+<p>Someone should be able to walk in, see those three numbers, and understand the situation in under 10 seconds.</p>
+<p>That's the goal of a card visual.</p>
+<p>Not detail.</p>
+<p>Not depth.</p>
+<p>Immediate understanding.</p>
 
 <h2>Drill #5</h2>
 <div class="drill-block">
   <div class="drill-header"><span class="icon">▶</span> The Sentence Drill</div>
-  <p>Build a card. Read it as a sentence. Write the sentence down. Delete the card.</p>
-  <p>Build a different card using a different column. Read it as a sentence. Write it. Delete it.</p>
-  <p>Build a third card. Apply a filter. Read the new sentence. Delete it. Repeat three times.</p>
-  <p>You're training yourself to always ask: "What does this number actually say?"</p>
+  <p>Build a card.</p>
+  <p>Read it as a sentence.</p>
+  <p>Write the sentence down.</p>
+  <p>Delete the card.</p>
+
+  <p>Build a different card using a different column.</p>
+  <p>Read it as a sentence.</p>
+  <p>Write it down.</p>
+  <p>Delete it.</p>
+
+  <p>Build a third card.</p>
+  <p>Apply a filter.</p>
+  <p>Read the new sentence.</p>
+  <p>Delete it.</p>
+
+  <p>Repeat the sequence three times.</p>
+  <p>You're training yourself to always ask:</p>
+  <p><strong>"What does this number actually say?"</strong></p>
 </div>
 
 <h2>Reflection</h2>
-<ol class="numbered-list">
+<ul class="numbered-list">
   <li><span class="n">01</span>What is the most important single number in your data?</li>
   <li><span class="n">02</span>Did the number Power BI showed match what you expected? Why or why not?</li>
   <li><span class="n">03</span>What's the difference between Count and Count (Distinct)?</li>
   <li><span class="n">04</span>What does the three-card view communicate that a chart can't?</li>
   <li><span class="n">05</span>What label would make each card immediately understandable to someone who didn't build it?</li>
-</ol>
+</ul>
 
 <h2>Challenge</h2>
-<p>Build a summary view that could replace a verbal briefing. Three to five cards, each answering one specific question, each with a label that makes it self-explanatory. Show it to one real person. Ask: "What does this tell you?" Write down exactly what they say. Did they understand it correctly?</p>
+<p>Build a summary view that could replace a verbal briefing.</p>
+<p>Use three to five cards.</p>
+<p>Each card should answer one specific question.</p>
+<p>Each card should have a label that makes it self-explanatory.</p>
+<p>Show it to one real person.</p>
+<p>Ask:</p>
+<p><strong>"What does this tell you?"</strong></p>
+<p>Write down exactly what they say.</p>
+<p>Did they understand it correctly?</p>
 
 <h2>Teach Back</h2>
-<p>Explain what a card visual is and when to use it. Explain the meaning check and how to do it. Explain why one number is sometimes more powerful than a chart. Explain how three cards together can replace a verbal briefing.</p>
+<p>Explain what a card visual is and when to use it.</p>
+<p>Explain the meaning check and how to do it.</p>
+<p>Explain why one number is sometimes more powerful than a chart.</p>
+<p>Explain how three cards together can replace a verbal briefing.</p>
+<p>Then explain Pattern #5 in plain language:</p>
+<p><strong>Find the number that answers the question. Make sure the number means what you think it means. Label it clearly.</strong></p>
 
 <h2>Common Mistakes</h2>
-<div class="mistake-block"><strong>Mistake 1 — Trusting the default number without checking</strong><p>Power BI will make an assumption about Count vs Sum. It won't always be right. Always do the meaning check.</p></div>
-<div class="mistake-block"><strong>Mistake 2 — Building cards without labels</strong><p>"47" means nothing to someone who didn't build the report. "47 personnel with incomplete training" means everything. Labels are meaning, not decoration.</p></div>
-<div class="mistake-block"><strong>Mistake 3 — Using too many cards</strong><p>Eight cards is visual noise. Three to five is the effective range. If you need more, ask whether some should be a chart instead.</p></div>
-<div class="mistake-block"><strong>Mistake 4 — Forgetting that cards can be filtered</strong><p>A card with no filter answers a broad question. A card with a filter answers a focused question. Know which one you've built.</p></div>
+<div class="mistake-block">
+  <strong>Mistake 1 — Trusting the default number without checking</strong>
+  <p>Power BI will make an assumption about Count vs Sum. It won't always be right. Always do the meaning check.</p>
+</div>
+
+<div class="mistake-block">
+  <strong>Mistake 2 — Building cards without labels</strong>
+  <p>"47" means nothing to someone who didn't build the report. "47 personnel with incomplete training" means everything. Labels are meaning, not decoration.</p>
+</div>
+
+<div class="mistake-block">
+  <strong>Mistake 3 — Using too many cards</strong>
+  <p>Eight cards is visual noise. Three to five is the effective range. If you need more, ask whether some should be a chart instead.</p>
+</div>
+
+<div class="mistake-block">
+  <strong>Mistake 4 — Forgetting that cards can be filtered</strong>
+  <p>A card with no filter answers a broad question. A card with a filter answers a focused question. Know which one you've built.</p>
+</div>
+
+<div class="mistake-block">
+  <strong>Mistake 5 — Using a card when the audience needs comparison</strong>
+  <p>If the real question is "which category is bigger?" use a chart. If the real question is "what is the number?" use a card.</p>
+</div>
 
 <div class="homework-block">
   <div class="hw-label">Homework</div>
-  <p>Build a three-card summary of your most important work data. Each card answers a question your unit actually cares about. Each card has a label anyone could read and understand. Save this — you'll build on it in Lesson 6.</p>
+  <p>Build a three-card summary of your most important work data.</p>
+  <p>Each card should answer a question your unit actually cares about.</p>
+  <p>Each card should have a label anyone could read and understand.</p>
+  <p>Save this file.</p>
+  <p>You'll build on it in Lesson 6.</p>
 </div>
 
 <div class="summary-block">
   <div class="sum-label">Lesson Summary</div>
   <p>Before this lesson, a number was just a count.</p>
   <p>After this lesson, a number is an answer — and placing that answer where the right person will see it is a design decision, not an afterthought.</p>
+  <p>You also learned Pattern #5: <strong>One Number Answer</strong>.</p>
+  <p>Before building another chart, ask:</p>
+  <p><strong>Could a single number answer this question?</strong></p>
   <p>In Lesson 6, you'll make everything you've built look intentional — because a report that's hard to read doesn't get read.</p>
 </div>
+
 
     </div>
     <div class="lesson-nav-footer"><a href="/pattern_fluency/lessons/lesson-4.html" class="nav-btn">← Lesson 4</a><a href="/pattern_fluency/lessons/lesson-6.html" class="nav-btn primary">Lesson 6 →</a></div>
