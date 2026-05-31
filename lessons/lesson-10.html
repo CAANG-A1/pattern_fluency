@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 10: Patterns Over Time — Pattern Fluency</title>
+  <link rel="stylesheet" href="/pattern_fluency/css/style.css">
+  <link rel="stylesheet" href="/pattern_fluency/css/pattern-additions.css">
+</head>
+<body>
+<button class="mobile-toggle" id="mobile-toggle">☰</button>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="site-wrapper">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="/pattern_fluency/index.html" class="wordmark">Pattern Fluency</a>
+      <span class="sub">Power BI · Volume 2</span>
+    </div>
+    <div class="sidebar-nav">
+      <div class="nav-section"><div class="nav-section-label">Start Here</div></div>
+      <a href="/pattern_fluency/index.html" class="nav-link">Home</a>
+      <a href="/pattern_fluency/philosophy.html" class="nav-link">The Method</a>
+      <a href="/pattern_fluency/reference.html" class="nav-link">Quick Reference</a>
+      <a href="/pattern_fluency/pattern-library.html" class="nav-link">Pattern Library</a>
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 1 — Seeing Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-1.html" class="nav-link"><span class="num">01</span>Answer Your First Question</a>
+<a href="/pattern_fluency/lessons/lesson-2.html" class="nav-link"><span class="num">02</span>Different Pictures</a>
+<a href="/pattern_fluency/lessons/lesson-3.html" class="nav-link"><span class="num">03</span>Your Data Has a Shape</a>
+<a href="/pattern_fluency/lessons/lesson-4.html" class="nav-link"><span class="num">04</span>Filters Change the Question</a>
+<a href="/pattern_fluency/lessons/lesson-5.html" class="nav-link"><span class="num">05</span>One Number Tells a Story</a>
+<a href="/pattern_fluency/lessons/lesson-6.html" class="nav-link"><span class="num">06</span>Make It Yours</a>
+<a href="/pattern_fluency/lessons/lesson-7.html" class="nav-link"><span class="num">07</span>Share What You See</a>
+<a href="/pattern_fluency/lessons/lesson-8.html" class="nav-link"><span class="num">08</span>Capstone</a>
+
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 2 — Thinking in Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-9.html" class="nav-link"><span class="num">09</span>Make Two Spreadsheets Talk</a>
+<a href="/pattern_fluency/lessons/lesson-10.html" class="nav-link active"><span class="num">10</span>Patterns Over Time</a>
+<a href="/pattern_fluency/lessons/lesson-11.html" class="nav-link"><span class="num">11</span>Your First Calculation</a>
+<a href="/pattern_fluency/lessons/lesson-12.html" class="nav-link"><span class="num">12</span>Drill Down, Not Just Across</a>
+<a href="/pattern_fluency/lessons/lesson-13.html" class="nav-link"><span class="num">13</span>Design for One Person</a>
+<a href="/pattern_fluency/lessons/lesson-14.html" class="nav-link"><span class="num">14</span>Automate the Update</a>
+<a href="/pattern_fluency/lessons/lesson-15.html" class="nav-link"><span class="num">15</span>Answer the Unanswerable</a>
+<a href="/pattern_fluency/lessons/lesson-16.html" class="nav-link"><span class="num">16</span>Capstone — Build a Dashboard That Matters</a>
+
+    </div>
+    <div class="sidebar-footer">Pattern Fluency Method · v2.0</div>
+  </nav>
+  <main class="main-content">
+    <div class="topbar">
+      <div class="topbar-breadcrumb">Volume 2 <span>/ Lesson 10</span></div>
+      <div class="progress-indicator"><div class="progress-dot done"></div><div class="progress-dot current"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div></div>
+    </div>
+    <div class="page-hero">
+      <div class="hero-eyebrow">Lesson 10 of 16 &nbsp;·&nbsp; Volume 2</div>
+      <h1>Patterns Over Time</h1>
+    </div>
+    <div class="belief-strip">
+  <div class="belief-card current">
+    <div class="belief-label">Before This Lesson</div>
+    <div class="belief-text">Data is a snapshot. It shows me where things stand right now.</div>
+  </div>
+  <div class="belief-arrow">→</div>
+  <div class="belief-card target">
+    <div class="belief-label">After This Lesson</div>
+    <div class="belief-text">Data over time is a story. It shows where things are going — and how we got here.</div>
+  </div>
+</div>
+    <div class="lesson-body">
+
+<h2>Welcome Back</h2>
+<p>Last lesson you connected two tables and answered a question that neither could answer alone. Today you add a new dimension: time.</p>
+<p>A single report tells you where things stand right now. A trend tells you where things are going — and whether they're getting better or worse.</p>
+<p>The difference between a snapshot and a story is a date column.</p>
+
+<div class="coach-pause">
+  <div class="label">Pattern Review</div>
+  <p>Pattern #3 (Read the Shape) taught you to look for what's in a spreadsheet before building anything. Today, the most important thing to look for is a date column. If it exists, you can tell a story over time. If it doesn't, you're limited to snapshots. Know which one you have before you build.</p>
+</div>
+
+<h2>Before We Open Power BI</h2>
+<p>Look at the data you've been working with.</p>
+<p>Does it have a date column? A month column? A fiscal year column?</p>
+<p>If yes — you can build a trend. If no — you'll need to find or add one before this lesson makes sense with your data.</p>
+<p>For today, we'll build a simple dataset with dates so you can practice the pattern regardless of what your real data looks like.</p>
+
+<h2>Step 1 — Build a Time-Based Dataset</h2>
+<p>Create a new Excel file called <strong>ReadinessOverTime.xlsx</strong>:</p>
+
+<table class="data-table">
+  <thead><tr><th>Month</th><th>Unit</th><th>Readiness</th></tr></thead>
+  <tbody>
+    <tr><td>2024-01</td><td>129</td><td>82</td></tr>
+    <tr><td>2024-02</td><td>129</td><td>78</td></tr>
+    <tr><td>2024-03</td><td>129</td><td>85</td></tr>
+    <tr><td>2024-04</td><td>129</td><td>91</td></tr>
+    <tr><td>2024-05</td><td>129</td><td>88</td></tr>
+    <tr><td>2024-06</td><td>129</td><td>94</td></tr>
+    <tr><td>2024-01</td><td>144</td><td>75</td></tr>
+    <tr><td>2024-02</td><td>144</td><td>79</td></tr>
+    <tr><td>2024-03</td><td>144</td><td>72</td></tr>
+    <tr><td>2024-04</td><td>144</td><td>80</td></tr>
+    <tr><td>2024-05</td><td>144</td><td>83</td></tr>
+    <tr><td>2024-06</td><td>144</td><td>86</td></tr>
+  </tbody>
+</table>
+
+<p style="margin-top:12px;">Save it. Import it into Power BI.</p>
+
+<h2>Step 2 — Build the Trend Line</h2>
+<div class="step-block">
+  <div class="step-header">The Line Chart</div>
+  <div class="step-content">
+    <p>Click a blank area of the canvas. Find the line chart icon in the Visualizations panel. Click it.</p>
+    <p>Place <strong>Month</strong> in the <strong>X-axis</strong> box.</p>
+    <p>Place <strong>Readiness</strong> in the <strong>Y-axis</strong> box.</p>
+    <p>Look at the canvas. You should see a line rising and falling across time.</p>
+    <p>Now drag <strong>Unit</strong> to the <strong>Legend</strong> box.</p>
+    <p>Two lines appear — one per unit. Now you can compare trends side by side.</p>
+  </div>
+</div>
+
+<div class="stop-think">
+  <div class="label">If the X-axis Shows Numbers Instead of Months</div>
+  <p>Power BI may have read your Month column as a number instead of a date. Click the Month column in the field list on the right. Look for a data type indicator. If it shows a number icon instead of a calendar icon, right-click the column name → Change data type → Date or Text. Reimport if needed.</p>
+</div>
+
+<div class="coach-pause">
+  <div class="label">What a Trend Reveals That a Snapshot Hides</div>
+  <p>A snapshot of June shows Unit 129 at 94% readiness. Impressive. But the trend shows that Unit 144 has been climbing steadily while Unit 129 peaked in April and dipped before recovering. The snapshot answers "where are we?" The trend answers "where are we going and how did we get here?"</p>
+  <p>Those are completely different questions.</p>
+</div>
+
+<h2>Step 3 — Read the Trend</h2>
+<p>Look at your line chart. Answer these questions out loud before reading on:</p>
+<p>Which unit is trending up? Which is trending down? Which had the sharpest change? At what point did the lines cross?</p>
+<p>The goal is not to memorize numbers. The goal is to see a story.</p>
+
+<div class="stop-think">
+  <div class="label">The Trend Question</div>
+  <p>A bar chart asks: <strong>who has the most right now?</strong></p>
+  <p>A line chart asks: <strong>where is this going?</strong></p>
+  <p>Both questions matter. Neither replaces the other. Use bar charts for comparisons. Use line charts for stories over time.</p>
+</div>
+
+<div class="coach-pause">
+  <div class="label">What You Just Learned</div>
+  <p>You may think you just learned how to build a line chart. You didn't. You learned your tenth Pattern Fluency pattern. When you want to know where something is going — not just where it is — you need a date column and a line chart. The trend is the story. The snapshot is just one chapter.</p>
+</div>
+
+<div class="pattern-card">
+  <div class="pattern-label">Pattern #10</div>
+  <h3>Read the Trend</h3>
+  <p><strong>Question:</strong> Where is this going — and how did we get here?</p>
+  <p><strong>Recipe:</strong></p>
+  <ul>
+    <li>Look for a date column in your data. If it doesn't exist, ask why and find one.</li>
+    <li>Place the date column in the <strong>X-axis</strong>.</li>
+    <li>Place your measure in the <strong>Y-axis</strong>.</li>
+    <li>Use a <strong>line chart</strong> — not a bar chart.</li>
+    <li>Add a category to the <strong>Legend</strong> to compare multiple trends.</li>
+    <li>Read the story: what's rising, what's falling, where did the lines cross?</li>
+  </ul>
+  <p><strong>Example:</strong> Month → X-axis. Readiness → Y-axis. Unit → Legend. Story: Unit 144 is catching up to Unit 129.</p>
+</div>
+
+<h2>Drill #10</h2>
+<div class="drill-block">
+  <div class="drill-header"><span class="icon">▶</span> The Trend Reading Drill</div>
+  <p>Build the line chart with both units.</p>
+  <p>Look at it for 30 seconds. Write down one sentence describing the trend for each unit.</p>
+  <p>Remove Unit from the Legend. State the new question the chart answers.</p>
+  <p>Add Unit back. Switch to a bar chart. State what you lose.</p>
+  <p>Switch back to a line chart. State what you regain.</p>
+  <p>Repeat three times. Every time — write the sentence describing the trend before you change anything.</p>
+</div>
+
+<h2>Reflection</h2>
+<ul class="numbered-list">
+  <li><span class="n">01</span>What story does the trend tell that a single snapshot could not?</li>
+  <li><span class="n">02</span>What happened when you removed Unit from the Legend? What question did that change?</li>
+  <li><span class="n">03</span>If you were briefing leadership, which chart — bar or line — would you show first, and why?</li>
+  <li><span class="n">04</span>What would you need to know to predict next month's readiness?</li>
+  <li><span class="n">05</span>Does your real work data have a date column? If not, what would it take to add one?</li>
+</ul>
+
+<h2>Challenge</h2>
+<p>Find a real dataset from your work that has a date or time column.</p>
+<p>Import it into Power BI.</p>
+<p>Build a line chart. Add a category to the Legend if you have one.</p>
+<p>Write two sentences: one describing what the trend says, one describing what it predicts.</p>
+<p>Show it to one person. Ask: "What story does this tell you?"</p>
+
+<h2>Teach Back</h2>
+<p>Explain the difference between a snapshot and a trend.</p>
+<p>Explain why a line chart is different from a bar chart — not technically, but in terms of the question it answers.</p>
+<p>Explain Pattern #10 in plain language:</p>
+<p><strong>Find the date column. Put it on the X-axis. Use a line chart. Read the story, not just the numbers.</strong></p>
+
+<h2>Common Mistakes</h2>
+<div class="mistake-block"><strong>Mistake 1 — Using a bar chart when you mean a line chart</strong><p>Bar charts compare values at a single point in time. Line charts show change over time. If your X-axis is a date, you almost always want a line chart. The bar chart will give you bars for each date — readable, but not the trend.</p></div>
+<div class="mistake-block"><strong>Mistake 2 — Missing the date column</strong><p>If your data doesn't have a date column, you can't build a trend. This is a data shape problem (Pattern #3). Ask where the date information is — it may be in a filename, a tab name, or a separate tracking system.</p></div>
+<div class="mistake-block"><strong>Mistake 3 — Reading individual points instead of the line</strong><p>The value of a trend is the direction, not the individual data points. Train yourself to read the slope first, then the individual values. "It's going up" matters more than "it's at 88 this month."</p></div>
+<div class="mistake-block"><strong>Mistake 4 — Too many lines on one chart</strong><p>More than four or five lines on one chart becomes unreadable. If you have many categories, use Pattern #4 (Filter = New Question) to focus on the most important two or three.</p></div>
+
+<div class="homework-block">
+  <div class="hw-label">Homework</div>
+  <p>Find or create a dataset from your work that has at least 6 months of data.</p>
+  <p>Build a line chart. Read the trend out loud.</p>
+  <p>Write one sentence: "Based on this trend, I predict ___."</p>
+  <p>Save the file. You'll build on it in Lesson 11.</p>
+</div>
+
+<div class="summary-block">
+  <div class="sum-label">Lesson Summary</div>
+  <p>Before this lesson, data was a snapshot — a picture of right now.</p>
+  <p>After this lesson, data is a story — a line moving through time that reveals direction, momentum, and change.</p>
+  <p>You also learned Pattern #10: <strong>Read the Trend</strong>.</p>
+  <p>Date on X-axis. Measure on Y-axis. Line chart. Read the direction, not just the number.</p>
+  <p>In Lesson 11, you'll learn to calculate things that aren't in the data yet — your first Power BI measure.</p>
+</div>
+
+    </div>
+    <div class="lesson-nav-footer"><a href="/pattern_fluency/lessons/lesson-9.html" class="nav-btn">← Lesson 9</a><a href="/pattern_fluency/lessons/lesson-11.html" class="nav-btn primary">Lesson 11 →</a></div>
+  </main>
+</div>
+<script src="/pattern_fluency/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 16: Capstone — Build a Dashboard That Matters — Pattern Fluency</title>
+  <link rel="stylesheet" href="/pattern_fluency/css/style.css">
+  <link rel="stylesheet" href="/pattern_fluency/css/pattern-additions.css">
+</head>
+<body>
+<button class="mobile-toggle" id="mobile-toggle">☰</button>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="site-wrapper">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="/pattern_fluency/index.html" class="wordmark">Pattern Fluency</a>
+      <span class="sub">Power BI · Volume 2</span>
+    </div>
+    <div class="sidebar-nav">
+      <div class="nav-section"><div class="nav-section-label">Start Here</div></div>
+      <a href="/pattern_fluency/index.html" class="nav-link">Home</a>
+      <a href="/pattern_fluency/philosophy.html" class="nav-link">The Method</a>
+      <a href="/pattern_fluency/reference.html" class="nav-link">Quick Reference</a>
+      <a href="/pattern_fluency/pattern-library.html" class="nav-link">Pattern Library</a>
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 1 — Seeing Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-1.html" class="nav-link"><span class="num">01</span>Answer Your First Question</a>
+<a href="/pattern_fluency/lessons/lesson-2.html" class="nav-link"><span class="num">02</span>Different Pictures</a>
+<a href="/pattern_fluency/lessons/lesson-3.html" class="nav-link"><span class="num">03</span>Your Data Has a Shape</a>
+<a href="/pattern_fluency/lessons/lesson-4.html" class="nav-link"><span class="num">04</span>Filters Change the Question</a>
+<a href="/pattern_fluency/lessons/lesson-5.html" class="nav-link"><span class="num">05</span>One Number Tells a Story</a>
+<a href="/pattern_fluency/lessons/lesson-6.html" class="nav-link"><span class="num">06</span>Make It Yours</a>
+<a href="/pattern_fluency/lessons/lesson-7.html" class="nav-link"><span class="num">07</span>Share What You See</a>
+<a href="/pattern_fluency/lessons/lesson-8.html" class="nav-link"><span class="num">08</span>Capstone</a>
+
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 2 — Thinking in Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-9.html" class="nav-link"><span class="num">09</span>Make Two Spreadsheets Talk</a>
+<a href="/pattern_fluency/lessons/lesson-10.html" class="nav-link"><span class="num">10</span>Patterns Over Time</a>
+<a href="/pattern_fluency/lessons/lesson-11.html" class="nav-link"><span class="num">11</span>Your First Calculation</a>
+<a href="/pattern_fluency/lessons/lesson-12.html" class="nav-link"><span class="num">12</span>Drill Down, Not Just Across</a>
+<a href="/pattern_fluency/lessons/lesson-13.html" class="nav-link"><span class="num">13</span>Design for One Person</a>
+<a href="/pattern_fluency/lessons/lesson-14.html" class="nav-link"><span class="num">14</span>Automate the Update</a>
+<a href="/pattern_fluency/lessons/lesson-15.html" class="nav-link"><span class="num">15</span>Answer the Unanswerable</a>
+<a href="/pattern_fluency/lessons/lesson-16.html" class="nav-link active"><span class="num">16</span>Capstone — Build a Dashboard That Matters</a>
+
+    </div>
+    <div class="sidebar-footer">Pattern Fluency Method · v2.0</div>
+  </nav>
+  <main class="main-content">
+    <div class="topbar">
+      <div class="topbar-breadcrumb">Volume 2 <span>/ Lesson 16</span></div>
+      <div class="progress-indicator"><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot current"></div></div>
+    </div>
+    <div class="page-hero">
+      <div class="hero-eyebrow">Lesson 16 of 16 &nbsp;·&nbsp; Volume 2</div>
+      <h1>Capstone — Build a Dashboard That Matters</h1>
+    </div>
+    <div class="belief-strip">
+  <div class="belief-card current">
+    <div class="belief-label">Before This Lesson</div>
+    <div class="belief-text">I've learned the Volume 2 patterns. Now I need to connect them.</div>
+  </div>
+  <div class="belief-arrow">→</div>
+  <div class="belief-card target">
+    <div class="belief-label">After This Lesson</div>
+    <div class="belief-text">I can move from a real unit need to a live, connected, decision-ready dashboard.</div>
+  </div>
+</div>
+    <div class="lesson-body">
+
+<h2>This Is Not a New Lesson</h2>
+<p>This is where everything from Volume 2 becomes one thing.</p>
+<p>You're going to build a complete dashboard from scratch. Not a report — a dashboard. Something your unit will use to make real decisions, on real data, on a schedule that keeps it current.</p>
+<p>This is your graduation from Volume 2.</p>
+
+<h2>What You Know From Volume 1</h2>
+<ul class="numbered-list">
+  <li><span class="n">01</span><strong>Pattern #1 — Group &amp; Count:</strong> Category → X-axis. Record identifier → Y-axis.</li>
+  <li><span class="n">02</span><strong>Pattern #2 — Change the Lens:</strong> Same data, different visual, different question.</li>
+  <li><span class="n">03</span><strong>Pattern #3 — Read the Shape:</strong> Identify what the data can and cannot answer before building.</li>
+  <li><span class="n">04</span><strong>Pattern #4 — Filter = New Question:</strong> Broad question → filter → focused question.</li>
+  <li><span class="n">05</span><strong>Pattern #5 — One Number Answer:</strong> Card visual. Meaning check. Label clearly.</li>
+  <li><span class="n">06</span><strong>Pattern #6 — Design for the Reader:</strong> Plain labels, logical layout, intentional color, useful slicers.</li>
+  <li><span class="n">07</span><strong>Pattern #7 — Publish, Test, Improve:</strong> Publish → test → share → "what does this tell you?" → improve.</li>
+  <li><span class="n">08</span><strong>Pattern #8 — Build the Full Loop:</strong> Question to published, presented report.</li>
+</ul>
+
+<h2>What You Know From Volume 2</h2>
+<ul class="numbered-list">
+  <li><span class="n">09</span><strong>Pattern #9 — Connect the Tables:</strong> Find the linking column. Create the relationship. Answer the cross-table question.</li>
+  <li><span class="n">10</span><strong>Pattern #10 — Read the Trend:</strong> Date on X-axis. Measure on Y-axis. Line chart. Read direction, not just numbers.</li>
+  <li><span class="n">11</span><strong>Pattern #11 — Derive the Answer:</strong> Plain English first. DAX second. Test. Use everywhere.</li>
+  <li><span class="n">12</span><strong>Pattern #12 — Drill to the Detail:</strong> Build a hierarchy. Enable drill mode. Click to explore.</li>
+  <li><span class="n">13</span><strong>Pattern #13 — Design for the Decision:</strong> Name the decision. Must-see number. Supporting context. Remove everything else.</li>
+  <li><span class="n">14</span><strong>Pattern #14 — Keep It Current:</strong> Shared location. Scheduled refresh. Live dashboard.</li>
+  <li><span class="n">15</span><strong>Pattern #15 — Close the Gap:</strong> Diagnose the gap type. Apply the right tool. Answer the impossible question.</li>
+</ul>
+
+<div class="coach-pause">
+  <div class="label">The Shift</div>
+  <p>You did not learn fifteen disconnected skills.</p>
+  <p>You learned fifteen patterns that fit together into one system.</p>
+  <p>Today, Pattern #16 connects them all.</p>
+</div>
+
+<div class="pattern-card">
+  <div class="pattern-label">Pattern #16</div>
+  <h3>Build the Full System</h3>
+  <p><strong>Question:</strong> Can I move from a real unit need to a live, connected, decision-ready dashboard?</p>
+  <p><strong>Recipe:</strong></p>
+  <ul>
+    <li><strong>1 — Name the decision</strong> (Pattern #13). One sentence. Who decides? What do they decide?</li>
+    <li><strong>2 — Read the shape</strong> (Pattern #3). What data exists? What's missing? Where are the gaps?</li>
+    <li><strong>3 — Connect the tables</strong> (Pattern #9). Find the linking columns. Build the relationships.</li>
+    <li><strong>4 — Close any gaps</strong> (Pattern #15). Missing calculation, column, or source? Fix it now.</li>
+    <li><strong>5 — Derive the measures</strong> (Pattern #11). Write the calculations in plain English. Translate to DAX.</li>
+    <li><strong>6 — Build the visuals</strong> (Patterns #1, #2, #5, #10, #12). Group &amp; count. Trend. Cards. Drill-down. Use the right pattern for each question.</li>
+    <li><strong>7 — Design for the decision</strong> (Pattern #13). Must-see number at the top. Supporting context below. Remove everything else.</li>
+    <li><strong>8 — Keep it current</strong> (Pattern #14). Move data to SharePoint. Configure scheduled refresh.</li>
+    <li><strong>9 — Publish, test, improve</strong> (Pattern #7). Share. Ask "what does this tell you?" Fix what doesn't work.</li>
+    <li><strong>10 — Present</strong>. Five minutes. No slides. The dashboard and your voice.</li>
+  </ul>
+</div>
+
+<h2>The Capstone Requirements</h2>
+
+<div class="step-block">
+  <div class="step-header">Requirement 1 — A Real Decision</div>
+  <div class="step-content"><p>Name the specific decision your dashboard supports. One sentence. The person who makes it. What they decide. When they decide it.</p></div>
+</div>
+<div class="step-block">
+  <div class="step-header">Requirement 2 — Multiple Connected Tables</div>
+  <div class="step-content"><p>Your dashboard must draw from at least two connected data sources. The answer must require both — not be answerable by either alone.</p></div>
+</div>
+<div class="step-block">
+  <div class="step-header">Requirement 3 — At Least One Measure</div>
+  <div class="step-content"><p>At least one number on the dashboard must be a measure you created — not a column that already existed in the data. Write the plain English sentence for it before presenting.</p></div>
+</div>
+<div class="step-block">
+  <div class="step-header">Requirement 4 — Complete Construction</div>
+  <div class="step-content">
+    <p>Your dashboard must include: at least two card visuals (including your measure), at least one trend or comparison chart, at least one drill-down hierarchy or slicer, plain English labels on every visual, and a title that states the decision — not the data.</p>
+  </div>
+</div>
+<div class="step-block">
+  <div class="step-header">Requirement 5 — Live Data</div>
+  <div class="step-content"><p>Your data must be on SharePoint or OneDrive for Business. Scheduled refresh must be configured. The dashboard must update without manual intervention.</p></div>
+</div>
+<div class="step-block">
+  <div class="step-header">Requirement 6 — A Verbal Presentation</div>
+  <div class="step-content">
+    <p>Present to the person who makes the decision your dashboard supports. Five minutes maximum. No slides. Explain: what decision this supports, what the must-see number means, how the refresh works, and what you would add next.</p>
+  </div>
+</div>
+
+<h2>How to Approach This</h2>
+<div class="drill-block">
+  <div class="drill-header"><span class="icon">▶</span> Pattern #16 — Ten Steps</div>
+  <p><strong>1 — Write the decision.</strong> Before anything else.</p>
+  <p><strong>2 — Read the shape.</strong> List every data source you have. Label columns C or N. Identify gaps.</p>
+  <p><strong>3 — Close the gaps.</strong> Missing calculation, column, or source? Fix it before building visuals.</p>
+  <p><strong>4 — Connect the tables.</strong> Find the linking columns. Build the relationships in Model view.</p>
+  <p><strong>5 — Write your measures in plain English.</strong> Before opening the measure editor.</p>
+  <p><strong>6 — Create the measures in DAX.</strong> Test each one before using it in a visual.</p>
+  <p><strong>7 — Build the visuals.</strong> Most important at the top. Supporting context below. Use the right pattern for each question.</p>
+  <p><strong>8 — Move data to SharePoint. Configure scheduled refresh.</strong></p>
+  <p><strong>9 — Publish. Test. Share. Ask "what does this tell you?" Fix one thing.</strong></p>
+  <p><strong>10 — Present.</strong></p>
+</div>
+
+<h2>The Presentation</h2>
+<ol class="numbered-list">
+  <li><span class="n">01</span>What decision does this dashboard support — and who makes it?</li>
+  <li><span class="n">02</span>What is the must-see number — and what does it mean in plain language?</li>
+  <li><span class="n">03</span>What measure did you create — and what plain English sentence describes it?</li>
+  <li><span class="n">04</span>How does the dashboard stay current without manual work?</li>
+  <li><span class="n">05</span>What question does your unit still have that this dashboard cannot answer?</li>
+</ol>
+<p>Five minutes maximum. No slides. The dashboard on the screen and your voice.</p>
+
+<h2>Reflection After the Presentation</h2>
+<ul class="numbered-list">
+  <li><span class="n">01</span>Did the decision-maker make a better decision because of the dashboard? How do you know?</li>
+  <li><span class="n">02</span>What was the hardest gap to close — and how did you close it?</li>
+  <li><span class="n">03</span>What question does your unit have that still can't be answered?</li>
+  <li><span class="n">04</span>What would Volume 3 need to teach you to close that final gap?</li>
+  <li><span class="n">05</span>Who else in your unit could benefit from learning this — and are you ready to teach them?</li>
+</ul>
+
+<div class="coach-pause">
+  <div class="label">That Last Question</div>
+  <p>Volume 3 is about teaching others what you now know. The best test of mastery is whether you can transfer it. If you can build Pattern #16 — from decision to live dashboard — you can teach someone else to build it.</p>
+  <p>That's where Volume 3 begins.</p>
+</div>
+
+<div class="summary-block">
+  <div class="sum-label">Volume 2 Complete</div>
+  <p>At the beginning of Volume 2, you could build reports from a single spreadsheet.</p>
+  <p>Right now, you can build connected, calculated, decision-ready dashboards that update automatically — from real data, for real decisions, for real people.</p>
+  <p>You completed Pattern #16: <strong>Build the Full System</strong>.</p>
+  <p>That is not a course skill. That is a professional capability.</p>
+  <p>Volume 3 — Teaching Data — is waiting when you're ready.</p>
+</div>
+
+    </div>
+    <div class="lesson-nav-footer"><a href="/pattern_fluency/lessons/lesson-15.html" class="nav-btn">← Lesson 15</a><a href="/pattern_fluency/index.html" class="nav-btn primary">Volume 2 Complete →</a></div>
+  </main>
+</div>
+<script src="/pattern_fluency/js/main.js"></script>
+</body>
+</html>

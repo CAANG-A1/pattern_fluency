@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 13: Design for One Person — Pattern Fluency</title>
+  <link rel="stylesheet" href="/pattern_fluency/css/style.css">
+  <link rel="stylesheet" href="/pattern_fluency/css/pattern-additions.css">
+</head>
+<body>
+<button class="mobile-toggle" id="mobile-toggle">☰</button>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="site-wrapper">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="/pattern_fluency/index.html" class="wordmark">Pattern Fluency</a>
+      <span class="sub">Power BI · Volume 2</span>
+    </div>
+    <div class="sidebar-nav">
+      <div class="nav-section"><div class="nav-section-label">Start Here</div></div>
+      <a href="/pattern_fluency/index.html" class="nav-link">Home</a>
+      <a href="/pattern_fluency/philosophy.html" class="nav-link">The Method</a>
+      <a href="/pattern_fluency/reference.html" class="nav-link">Quick Reference</a>
+      <a href="/pattern_fluency/pattern-library.html" class="nav-link">Pattern Library</a>
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 1 — Seeing Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-1.html" class="nav-link"><span class="num">01</span>Answer Your First Question</a>
+<a href="/pattern_fluency/lessons/lesson-2.html" class="nav-link"><span class="num">02</span>Different Pictures</a>
+<a href="/pattern_fluency/lessons/lesson-3.html" class="nav-link"><span class="num">03</span>Your Data Has a Shape</a>
+<a href="/pattern_fluency/lessons/lesson-4.html" class="nav-link"><span class="num">04</span>Filters Change the Question</a>
+<a href="/pattern_fluency/lessons/lesson-5.html" class="nav-link"><span class="num">05</span>One Number Tells a Story</a>
+<a href="/pattern_fluency/lessons/lesson-6.html" class="nav-link"><span class="num">06</span>Make It Yours</a>
+<a href="/pattern_fluency/lessons/lesson-7.html" class="nav-link"><span class="num">07</span>Share What You See</a>
+<a href="/pattern_fluency/lessons/lesson-8.html" class="nav-link"><span class="num">08</span>Capstone</a>
+
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 2 — Thinking in Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-9.html" class="nav-link"><span class="num">09</span>Make Two Spreadsheets Talk</a>
+<a href="/pattern_fluency/lessons/lesson-10.html" class="nav-link"><span class="num">10</span>Patterns Over Time</a>
+<a href="/pattern_fluency/lessons/lesson-11.html" class="nav-link"><span class="num">11</span>Your First Calculation</a>
+<a href="/pattern_fluency/lessons/lesson-12.html" class="nav-link"><span class="num">12</span>Drill Down, Not Just Across</a>
+<a href="/pattern_fluency/lessons/lesson-13.html" class="nav-link active"><span class="num">13</span>Design for One Person</a>
+<a href="/pattern_fluency/lessons/lesson-14.html" class="nav-link"><span class="num">14</span>Automate the Update</a>
+<a href="/pattern_fluency/lessons/lesson-15.html" class="nav-link"><span class="num">15</span>Answer the Unanswerable</a>
+<a href="/pattern_fluency/lessons/lesson-16.html" class="nav-link"><span class="num">16</span>Capstone — Build a Dashboard That Matters</a>
+
+    </div>
+    <div class="sidebar-footer">Pattern Fluency Method · v2.0</div>
+  </nav>
+  <main class="main-content">
+    <div class="topbar">
+      <div class="topbar-breadcrumb">Volume 2 <span>/ Lesson 13</span></div>
+      <div class="progress-indicator"><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot current"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div></div>
+    </div>
+    <div class="page-hero">
+      <div class="hero-eyebrow">Lesson 13 of 16 &nbsp;·&nbsp; Volume 2</div>
+      <h1>Design for One Person</h1>
+    </div>
+    <div class="belief-strip">
+  <div class="belief-card current">
+    <div class="belief-label">Before This Lesson</div>
+    <div class="belief-text">A good report is accurate and easy to read.</div>
+  </div>
+  <div class="belief-arrow">→</div>
+  <div class="belief-card target">
+    <div class="belief-label">After This Lesson</div>
+    <div class="belief-text">A good report makes the right decision obvious to the person who needs to make it.</div>
+  </div>
+</div>
+    <div class="lesson-body">
+
+<h2>Welcome Back</h2>
+<p>You can connect tables, read trends, create measures, and drill into detail. You have real analytical capability now.</p>
+<p>Today is not about a new technical skill. Today is about what all those skills are for.</p>
+<p>Pattern #6 (Design for the Reader) taught you to design for someone who didn't build the report. In Volume 1, that meant labels, layout, color, and slicers.</p>
+<p>Volume 2's version of that lesson is harder: <strong>design for a specific decision.</strong></p>
+<p>Not a person who will read the report. A person who will make a choice because of the report.</p>
+
+<div class="coach-pause">
+  <div class="label">Pattern Review</div>
+  <p>Pattern #6 asked: can the reader understand this without me explaining it? Today's pattern asks something harder: can the reader make the right decision because of this report — without me being in the room?</p>
+  <p>That is the difference between a report and a decision support tool.</p>
+</div>
+
+<h2>Before We Open Power BI</h2>
+<div class="stop-think">
+  <div class="label">The Decision First</div>
+  <p>Write down a specific decision your unit needs to make in the next 30 days.</p>
+  <p>Examples: "Which unit gets priority scheduling for the remedial training?" or "Should we request additional funding for the supply shortfall?"</p>
+  <p>Name the person who makes that decision. Not the person who reads the report — the person who makes the call.</p>
+  <p>What does that person need to see to make the right decision? Write it down before touching Power BI.</p>
+</div>
+
+<h2>Step 1 — Map the Decision to the Data</h2>
+<p>Look at the decision you wrote down. Now ask:</p>
+<p>What data supports this decision? What would make the answer obvious? What would cause the decision-maker to ask a follow-up question?</p>
+<div class="step-block">
+  <div class="step-header">The Decision Blueprint</div>
+  <div class="step-content">
+    <p>Write three things before building anything:</p>
+    <p><strong>1. The decision:</strong> What will this person decide after seeing the report?</p>
+    <p><strong>2. The must-see number:</strong> What is the one number that most directly informs the decision?</p>
+    <p><strong>3. The supporting context:</strong> What two or three additional visuals give the decision-maker confidence?</p>
+    <p>That blueprint is your report design. Everything else gets left off.</p>
+  </div>
+</div>
+
+<h2>Step 2 — Build the Decision-First Report</h2>
+<div class="step-block">
+  <div class="step-header">Layout for Decisions</div>
+  <div class="step-content">
+    <p>Open Power BI. Build your report following this layout:</p>
+    <p><strong>Top row:</strong> Cards showing the must-see numbers. These answer "what's the situation?" in under 10 seconds.</p>
+    <p><strong>Middle row:</strong> One or two charts that provide context — a trend (Pattern #10) or a comparison (Pattern #1).</p>
+    <p><strong>Bottom row (optional):</strong> A drill-down chart (Pattern #12) for decision-makers who want to verify the detail.</p>
+    <p>Add a slicer if the decision-maker needs to focus on a specific unit, time period, or category.</p>
+    <p>Add a title that states the decision, not just the data: "Training Readiness: Which Units Need Priority Scheduling?"</p>
+  </div>
+</div>
+
+<div class="coach-pause">
+  <div class="label">The Hardest Part</div>
+  <p>The hardest part of this lesson is leaving things off.</p>
+  <p>You now have measures, trend charts, connected tables, and drill-down hierarchies. It's tempting to show all of it.</p>
+  <p>Don't.</p>
+  <p>Every visual that doesn't directly support the decision is noise that slows the decision-maker down.</p>
+  <p>The test: if a visual were removed, would the decision-maker be less able to make the right call? If no — remove it.</p>
+</div>
+
+<div class="coach-pause">
+  <div class="label">What You Just Learned</div>
+  <p>You may think you just learned how to design a better report. You didn't. You learned your thirteenth Pattern Fluency pattern. When the goal is a decision — not just understanding — every visual must earn its place by directly informing that decision. Anything that doesn't make the decision easier gets removed.</p>
+</div>
+
+<div class="pattern-card">
+  <div class="pattern-label">Pattern #13</div>
+  <h3>Design for the Decision</h3>
+  <p><strong>Question:</strong> What does this person need to see to make the right call?</p>
+  <p><strong>Recipe:</strong></p>
+  <ul>
+    <li>Name the decision — not the report topic. "Should we prioritize Unit 129 for remedial training?" not "Training Report."</li>
+    <li>Name the must-see number — the one that most directly answers the decision.</li>
+    <li>Name the supporting context — the two or three visuals that provide confidence.</li>
+    <li>Remove everything else.</li>
+    <li>Title the report as the decision, not the data.</li>
+    <li>Test: show it to someone. If they can make the right call without you explaining anything, it works.</li>
+  </ul>
+  <p><strong>Example:</strong> Decision: which unit gets priority scheduling? Must-see: incomplete training count by unit (card + bar chart). Context: trend showing trajectory. Remove: every other chart.</p>
+</div>
+
+<h2>Drill #13</h2>
+<div class="drill-block">
+  <div class="drill-header"><span class="icon">▶</span> The Removal Drill</div>
+  <p>Open a report you've already built — from this volume or Volume 1.</p>
+  <p>For every visual on the page, ask: "Does removing this make the decision harder?"</p>
+  <p>If no — remove it.</p>
+  <p>Count how many visuals you removed.</p>
+  <p>Show the reduced report to one person. Ask: "Can you make the decision this is designed for?"</p>
+  <p>If yes — the removals were correct. If no — add back only what's needed.</p>
+</div>
+
+<h2>Reflection</h2>
+<ul class="numbered-list">
+  <li><span class="n">01</span>What was the specific decision your report is designed to support?</li>
+  <li><span class="n">02</span>What is the must-see number — and why is it the most important?</li>
+  <li><span class="n">03</span>What did you remove from the report — and was it hard to remove?</li>
+  <li><span class="n">04</span>Could the decision-maker make the right call without you in the room?</li>
+  <li><span class="n">05</span>What's the difference between a report that informs and a report that decides?</li>
+</ul>
+
+<h2>Challenge</h2>
+<p>Show your decision-first report to the person who actually makes the decision it's designed for.</p>
+<p>Do not explain it. Do not walk them through it. Just hand it to them.</p>
+<p>After two minutes, ask: "What would you decide based on what you see?"</p>
+<p>Did they make the right call? Did they ask for something the report doesn't show? What does that tell you?</p>
+
+<h2>Teach Back</h2>
+<p>Explain the difference between designing for a reader and designing for a decision.</p>
+<p>Explain how you decide what to remove from a report.</p>
+<p>Explain Pattern #13 in plain language:</p>
+<p><strong>Name the decision first. Find the must-see number. Add two visuals for context. Remove everything else. Title it as a decision, not a report.</strong></p>
+
+<h2>Common Mistakes</h2>
+<div class="mistake-block"><strong>Mistake 1 — Showing everything you know</strong><p>A report that shows everything you know about the data is a data dump. A report that shows exactly what the decision-maker needs is a decision tool. They are not the same. Never confuse thoroughness with usefulness.</p></div>
+<div class="mistake-block"><strong>Mistake 2 — Naming the report after the data instead of the decision</strong><p>"Unit Training Report" tells the reader what the data is. "Which units need priority scheduling?" tells the reader what to do with it. Titles that state the decision make reports more powerful.</p></div>
+<div class="mistake-block"><strong>Mistake 3 — Designing for your own curiosity</strong><p>The measures, trends, and hierarchies you built are genuinely interesting. That doesn't mean they belong on this report. Design for the decision-maker's needs, not your analytical enthusiasm.</p></div>
+<div class="mistake-block"><strong>Mistake 4 — Not testing with the actual decision-maker</strong><p>You cannot know whether a report supports a decision until you watch someone make it. Always test with the person who will actually use the report — not with yourself or a proxy.</p></div>
+
+<div class="homework-block">
+  <div class="hw-label">Homework</div>
+  <p>Find a real decision your unit faces in the next month.</p>
+  <p>Build a report specifically designed to support that decision.</p>
+  <p>Show it to the decision-maker before the decision is made.</p>
+  <p>After the decision is made, ask: "Did the report help? What was missing?"</p>
+  <p>Write down the answer. You'll use it to improve the design.</p>
+</div>
+
+<div class="summary-block">
+  <div class="sum-label">Lesson Summary</div>
+  <p>Before this lesson, a good report was one that was accurate and easy to read.</p>
+  <p>After this lesson, a good report is one that makes the right decision obvious to the person who needs to make it.</p>
+  <p>You also learned Pattern #13: <strong>Design for the Decision</strong>.</p>
+  <p>Name the decision. Find the must-see number. Add context. Remove everything else. Test with the decision-maker.</p>
+  <p>In Lesson 14, you'll learn how to keep your reports current automatically — so the decision-maker always sees fresh data, not a snapshot from last week.</p>
+</div>
+
+    </div>
+    <div class="lesson-nav-footer"><a href="/pattern_fluency/lessons/lesson-12.html" class="nav-btn">← Lesson 12</a><a href="/pattern_fluency/lessons/lesson-14.html" class="nav-btn primary">Lesson 14 →</a></div>
+  </main>
+</div>
+<script src="/pattern_fluency/js/main.js"></script>
+</body>
+</html>

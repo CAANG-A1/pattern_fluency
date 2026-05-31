@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 14: Automate the Update — Pattern Fluency</title>
+  <link rel="stylesheet" href="/pattern_fluency/css/style.css">
+  <link rel="stylesheet" href="/pattern_fluency/css/pattern-additions.css">
+</head>
+<body>
+<button class="mobile-toggle" id="mobile-toggle">☰</button>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="site-wrapper">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="/pattern_fluency/index.html" class="wordmark">Pattern Fluency</a>
+      <span class="sub">Power BI · Volume 2</span>
+    </div>
+    <div class="sidebar-nav">
+      <div class="nav-section"><div class="nav-section-label">Start Here</div></div>
+      <a href="/pattern_fluency/index.html" class="nav-link">Home</a>
+      <a href="/pattern_fluency/philosophy.html" class="nav-link">The Method</a>
+      <a href="/pattern_fluency/reference.html" class="nav-link">Quick Reference</a>
+      <a href="/pattern_fluency/pattern-library.html" class="nav-link">Pattern Library</a>
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 1 — Seeing Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-1.html" class="nav-link"><span class="num">01</span>Answer Your First Question</a>
+<a href="/pattern_fluency/lessons/lesson-2.html" class="nav-link"><span class="num">02</span>Different Pictures</a>
+<a href="/pattern_fluency/lessons/lesson-3.html" class="nav-link"><span class="num">03</span>Your Data Has a Shape</a>
+<a href="/pattern_fluency/lessons/lesson-4.html" class="nav-link"><span class="num">04</span>Filters Change the Question</a>
+<a href="/pattern_fluency/lessons/lesson-5.html" class="nav-link"><span class="num">05</span>One Number Tells a Story</a>
+<a href="/pattern_fluency/lessons/lesson-6.html" class="nav-link"><span class="num">06</span>Make It Yours</a>
+<a href="/pattern_fluency/lessons/lesson-7.html" class="nav-link"><span class="num">07</span>Share What You See</a>
+<a href="/pattern_fluency/lessons/lesson-8.html" class="nav-link"><span class="num">08</span>Capstone</a>
+
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 2 — Thinking in Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-9.html" class="nav-link"><span class="num">09</span>Make Two Spreadsheets Talk</a>
+<a href="/pattern_fluency/lessons/lesson-10.html" class="nav-link"><span class="num">10</span>Patterns Over Time</a>
+<a href="/pattern_fluency/lessons/lesson-11.html" class="nav-link"><span class="num">11</span>Your First Calculation</a>
+<a href="/pattern_fluency/lessons/lesson-12.html" class="nav-link"><span class="num">12</span>Drill Down, Not Just Across</a>
+<a href="/pattern_fluency/lessons/lesson-13.html" class="nav-link"><span class="num">13</span>Design for One Person</a>
+<a href="/pattern_fluency/lessons/lesson-14.html" class="nav-link active"><span class="num">14</span>Automate the Update</a>
+<a href="/pattern_fluency/lessons/lesson-15.html" class="nav-link"><span class="num">15</span>Answer the Unanswerable</a>
+<a href="/pattern_fluency/lessons/lesson-16.html" class="nav-link"><span class="num">16</span>Capstone — Build a Dashboard That Matters</a>
+
+    </div>
+    <div class="sidebar-footer">Pattern Fluency Method · v2.0</div>
+  </nav>
+  <main class="main-content">
+    <div class="topbar">
+      <div class="topbar-breadcrumb">Volume 2 <span>/ Lesson 14</span></div>
+      <div class="progress-indicator"><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot current"></div><div class="progress-dot"></div><div class="progress-dot"></div></div>
+    </div>
+    <div class="page-hero">
+      <div class="hero-eyebrow">Lesson 14 of 16 &nbsp;·&nbsp; Volume 2</div>
+      <h1>Automate the Update</h1>
+    </div>
+    <div class="belief-strip">
+  <div class="belief-card current">
+    <div class="belief-label">Before This Lesson</div>
+    <div class="belief-text">Reports require manual work to stay current. I update them when I remember.</div>
+  </div>
+  <div class="belief-arrow">→</div>
+  <div class="belief-card target">
+    <div class="belief-label">After This Lesson</div>
+    <div class="belief-text">Reports can update automatically. When the data changes, everyone sees current information.</div>
+  </div>
+</div>
+    <div class="lesson-body">
+
+<h2>Welcome Back</h2>
+<p>Every report you've built in this curriculum has one problem: it's a snapshot. The data was current when you loaded it. An hour later — or a week later — the underlying spreadsheet may have changed, but the report still shows old numbers.</p>
+<p>Today you'll fix that. You'll set up a report that updates automatically when the data changes.</p>
+
+<div class="coach-pause">
+  <div class="label">Pattern Review</div>
+  <p>Pattern #7 (Publish, Test, Improve) taught you to share a report and get feedback. But a shared report is only valuable if it stays current. A report showing last month's readiness numbers when decisions need to be made today is worse than no report at all — it creates false confidence. Today's pattern makes your reports stay alive.</p>
+</div>
+
+<h2>Before We Open Power BI</h2>
+<p>Think about the reports you've built. How often does the underlying data change?</p>
+<p>Daily? Weekly? Monthly? When someone updates a spreadsheet?</p>
+<p>The answer tells you how frequently your report needs to refresh — and what setup you need.</p>
+
+<div class="stop-think">
+  <div class="label">Two Types of Data Sources</div>
+  <p><strong>File-based sources</strong> (Excel, CSV): the data lives in a file. When someone updates the file and saves it, Power BI can be set to reload it on a schedule.</p>
+  <p><strong>Live sources</strong> (SharePoint lists, databases, web feeds): the data lives in a system. Power BI can connect directly and query it on demand.</p>
+  <p>Most military and government analysts start with file-based sources. That's what we'll configure today.</p>
+</div>
+
+<h2>Step 1 — Move Your File to a Shared Location</h2>
+<div class="step-block">
+  <div class="step-header">Why Location Matters</div>
+  <div class="step-content">
+    <p>For Power BI to automatically refresh data from an Excel file, the file must be in a location that Power BI Service can reach. A file on your personal hard drive only works when your computer is on and Power BI Desktop is open.</p>
+    <p>Move your Excel file to one of these locations:</p>
+    <ul>
+      <li><strong>SharePoint</strong> — the preferred choice for government environments.</li>
+      <li><strong>OneDrive for Business</strong> — works with Power BI Service's scheduled refresh.</li>
+    </ul>
+    <p>Copy your Personnel.xlsx and Training.xlsx files to a SharePoint document library your team can access.</p>
+  </div>
+</div>
+
+<h2>Step 2 — Reconnect Power BI to the New Location</h2>
+<div class="step-block">
+  <div class="step-header">Changing the Data Source Path</div>
+  <div class="step-content">
+    <p>In Power BI Desktop, go to <span class="step-action">Home</span> → <span class="step-action">Transform data</span> → <span class="step-action">Data source settings</span>.</p>
+    <p>You'll see your current file paths. Click one and choose <span class="step-action">Change Source</span>.</p>
+    <p>Navigate to the SharePoint location where you saved the file. Select it.</p>
+    <p>Repeat for any other data sources.</p>
+    <p>Click <span class="step-action">Apply changes</span>. Power BI reloads from the new location.</p>
+    <p>Verify the data still looks correct.</p>
+  </div>
+</div>
+
+<h2>Step 3 — Publish and Configure Scheduled Refresh</h2>
+<div class="step-block">
+  <div class="step-header">Setting Up Automatic Updates</div>
+  <div class="step-content">
+    <p>Publish your report to Power BI Service (same as Lesson 7 / Pattern #7).</p>
+    <p>In Power BI Service, find your dataset (not the report — the dataset it's built on).</p>
+    <p>Click the three-dot menu next to the dataset → <span class="step-action">Settings</span>.</p>
+    <p>Find <strong>Scheduled refresh</strong>. Toggle it On.</p>
+    <p>Set the frequency: Daily, Weekly, or a specific time.</p>
+    <p>Click <span class="step-action">Apply</span>.</p>
+    <p>From now on, Power BI will automatically reload the data from SharePoint on your schedule.</p>
+  </div>
+</div>
+
+<div class="stop-think">
+  <div class="label">If Scheduled Refresh Isn't Available</div>
+  <p>Scheduled refresh requires a Power BI Pro or Premium license. If you don't see the option, check with your IT administrator about your organization's license level. Some government organizations use Power BI Premium per capacity, which enables refresh for all users.</p>
+  <p>In the meantime, you can manually refresh the dataset in Power BI Service by clicking the refresh icon next to the dataset name.</p>
+</div>
+
+<div class="coach-pause">
+  <div class="label">What You Just Built</div>
+  <p>Your report now has two parts that work independently:</p>
+  <p>The <strong>report</strong> — the visuals, layouts, and design you built.</p>
+  <p>The <strong>dataset</strong> — the data behind the report, which now refreshes automatically.</p>
+  <p>When someone updates the Excel file on SharePoint and Power BI runs its scheduled refresh, everyone who has access to the report sees current data — without you doing anything.</p>
+</div>
+
+<div class="coach-pause">
+  <div class="label">What You Just Learned</div>
+  <p>You may think you just learned how to configure scheduled refresh. You didn't. You learned your fourteenth Pattern Fluency pattern. A report that requires manual updates is a report that will eventually be wrong. Move your data to a shared location. Connect Power BI to that location. Schedule the refresh. Then let it run.</p>
+</div>
+
+<div class="pattern-card">
+  <div class="pattern-label">Pattern #14</div>
+  <h3>Keep It Current</h3>
+  <p><strong>Question:</strong> How do I make sure this report always shows current data without manual work?</p>
+  <p><strong>Recipe:</strong></p>
+  <ul>
+    <li>Move your source data to SharePoint or OneDrive for Business — somewhere Power BI Service can reach.</li>
+    <li>In Power BI Desktop: Data source settings → Change Source → point to the shared location.</li>
+    <li>Publish to Power BI Service.</li>
+    <li>In Power BI Service: Dataset settings → Scheduled refresh → On → set frequency → Apply.</li>
+    <li>Test: update the source file, wait for the scheduled refresh, confirm the report updated.</li>
+  </ul>
+  <p>A report that stays current without manual effort is a report that gets used. A report requiring manual updates is a report that gets ignored.</p>
+</div>
+
+<h2>Drill #14</h2>
+<div class="drill-block">
+  <div class="drill-header"><span class="icon">▶</span> The Live Data Test</div>
+  <p>After configuring scheduled refresh, test it manually:</p>
+  <p>Open your source Excel file on SharePoint. Change one number — add a row, change a status, update a value.</p>
+  <p>Go to Power BI Service. Find your dataset. Click the refresh icon (manual refresh).</p>
+  <p>Open your report. Did it reflect the change?</p>
+  <p>If yes — the connection is working. Scheduled refresh will do this automatically.</p>
+  <p>If no — check the data source path and credentials. The most common issue is a path that changed or credentials that need re-entering.</p>
+</div>
+
+<h2>Reflection</h2>
+<ul class="numbered-list">
+  <li><span class="n">01</span>Where is your data stored now — and why does that location matter for refresh?</li>
+  <li><span class="n">02</span>How frequently does your underlying data actually change?</li>
+  <li><span class="n">03</span>What would happen if someone made a decision based on data that was a week out of date?</li>
+  <li><span class="n">04</span>Who in your unit is responsible for keeping the source data updated?</li>
+  <li><span class="n">05</span>What's the difference between a report and a live dashboard — and which do you have now?</li>
+</ul>
+
+<h2>Challenge</h2>
+<p>Set up scheduled refresh on a report that your unit actually uses — or will use.</p>
+<p>Brief the person who maintains the source data: "When you update this file on SharePoint, the report updates automatically within [X hours]."</p>
+<p>Watch one refresh cycle complete. Confirm the report updated correctly.</p>
+
+<h2>Teach Back</h2>
+<p>Explain why a file on a local hard drive can't support automatic refresh.</p>
+<p>Explain the difference between the report and the dataset in Power BI Service.</p>
+<p>Explain Pattern #14 in plain language:</p>
+<p><strong>Move the data to SharePoint. Point Power BI to that location. Schedule the refresh. The report stays current without manual work.</strong></p>
+
+<h2>Common Mistakes</h2>
+<div class="mistake-block"><strong>Mistake 1 — Leaving data on a local drive</strong><p>A file at a local file on your desktop can only refresh when your computer is on and accessible to Power BI. Move it to SharePoint before configuring scheduled refresh.</p></div>
+<div class="mistake-block"><strong>Mistake 2 — Forgetting to test the refresh</strong><p>Always test manually after setting up scheduled refresh. Change a value in the source file, manually trigger a refresh in Power BI Service, and confirm the report updated. Do not assume it works — verify.</p></div>
+<div class="mistake-block"><strong>Mistake 3 — Refreshing more often than the data changes</strong><p>If your data updates monthly, a daily refresh wastes license refresh capacity and provides no benefit. Match the refresh frequency to how often the data actually changes.</p></div>
+<div class="mistake-block"><strong>Mistake 4 — No notification when refresh fails</strong><p>In Power BI Service dataset settings, you can configure email notifications when a refresh fails. Turn this on. A silent refresh failure means your report is showing stale data and no one knows.</p></div>
+
+<div class="homework-block">
+  <div class="hw-label">Homework</div>
+  <p>Move your most important report's data source to SharePoint.</p>
+  <p>Configure scheduled refresh.</p>
+  <p>Enable refresh failure notifications.</p>
+  <p>Share the report link (not the file) with the person who needs it most.</p>
+  <p>Tell them: "This report updates automatically. Bookmark the link."</p>
+</div>
+
+<div class="summary-block">
+  <div class="sum-label">Lesson Summary</div>
+  <p>Before this lesson, reports required manual updates to stay current.</p>
+  <p>After this lesson, your reports stay current automatically — as long as someone keeps the source data updated on SharePoint.</p>
+  <p>You also learned Pattern #14: <strong>Keep It Current</strong>.</p>
+  <p>Shared location. Connected source. Scheduled refresh. Live report.</p>
+  <p>In Lesson 15, you'll tackle the hardest challenge in Volume 2: answering a question that your current data cannot support — and engineering a way to close that gap.</p>
+</div>
+
+    </div>
+    <div class="lesson-nav-footer"><a href="/pattern_fluency/lessons/lesson-13.html" class="nav-btn">← Lesson 13</a><a href="/pattern_fluency/lessons/lesson-15.html" class="nav-btn primary">Lesson 15 →</a></div>
+  </main>
+</div>
+<script src="/pattern_fluency/js/main.js"></script>
+</body>
+</html>

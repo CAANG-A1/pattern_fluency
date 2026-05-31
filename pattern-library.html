@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pattern Library — Pattern Fluency</title>
   <link rel="stylesheet" href="/pattern_fluency/css/style.css">
+  <link rel="stylesheet" href="/pattern_fluency/css/pattern-additions.css">
 </head>
 <body>
 <button class="mobile-toggle" id="mobile-toggle">☰</button>
@@ -13,7 +14,7 @@
   <nav class="sidebar" id="sidebar">
     <div class="sidebar-brand">
       <a href="/pattern_fluency/index.html" class="wordmark">Pattern Fluency</a>
-      <span class="sub">Power BI · Volume 1</span>
+      <span class="sub">Power BI · Volumes 1 &amp; 2</span>
     </div>
     <div class="sidebar-nav">
       <div class="nav-section"><div class="nav-section-label">Start Here</div></div>
@@ -30,8 +31,17 @@
       <a href="/pattern_fluency/lessons/lesson-6.html" class="nav-link"><span class="num">06</span>Make It Yours</a>
       <a href="/pattern_fluency/lessons/lesson-7.html" class="nav-link"><span class="num">07</span>Share What You See</a>
       <a href="/pattern_fluency/lessons/lesson-8.html" class="nav-link"><span class="num">08</span>Capstone</a>
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 2 — Thinking in Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-9.html" class="nav-link"><span class="num">09</span>Make Two Spreadsheets Talk</a>
+      <a href="/pattern_fluency/lessons/lesson-10.html" class="nav-link"><span class="num">10</span>Patterns Over Time</a>
+      <a href="/pattern_fluency/lessons/lesson-11.html" class="nav-link"><span class="num">11</span>Your First Calculation</a>
+      <a href="/pattern_fluency/lessons/lesson-12.html" class="nav-link"><span class="num">12</span>Drill Down, Not Just Across</a>
+      <a href="/pattern_fluency/lessons/lesson-13.html" class="nav-link"><span class="num">13</span>Design for One Person</a>
+      <a href="/pattern_fluency/lessons/lesson-14.html" class="nav-link"><span class="num">14</span>Automate the Update</a>
+      <a href="/pattern_fluency/lessons/lesson-15.html" class="nav-link"><span class="num">15</span>Answer the Unanswerable</a>
+      <a href="/pattern_fluency/lessons/lesson-16.html" class="nav-link"><span class="num">16</span>Capstone</a>
     </div>
-    <div class="sidebar-footer">Pattern Fluency Method · v1.0</div>
+    <div class="sidebar-footer">Pattern Fluency Method · v2.0</div>
   </nav>
   <main class="main-content">
     <div class="topbar">
@@ -40,32 +50,92 @@
     <div class="page-hero">
       <div class="hero-eyebrow">Pattern Fluency Reference</div>
       <h1>Pattern Library</h1>
+      <p class="subtitle">All sixteen patterns — Volumes 1 and 2. When you recognize the pattern, you know what to do next.</p>
     </div>
     <div class="lesson-body">
-      <h2>Why This Page Exists</h2>
-      <p>Power BI is not just a collection of buttons. It is a set of repeatable patterns. When you recognize the pattern, you know what to do next.</p>
 
-      <div class="pattern-card"><div class="pattern-label">Pattern #1</div><h3>Group & Count</h3><p><strong>Use when:</strong> You need to know how many records are in each category.</p><p><strong>Recipe:</strong> Category → X-axis. Record identifier → Y-axis.</p></div>
-      <div class="pattern-card"><div class="pattern-label">Pattern #2</div><h3>Change the Lens</h3><p><strong>Use when:</strong> The same data may need a different visual to answer a different question.</p><p><strong>Recipe:</strong> Keep the data the same. Change the chart type. Ask what became easier or harder to see.</p></div>
-      <div class="pattern-card"><div class="pattern-label">Pattern #3</div><h3>Read the Shape</h3><p><strong>Use when:</strong> You receive data and need to know what questions it can support.</p><p><strong>Recipe:</strong> Identify category columns, identify number columns, then identify possible and impossible questions.</p></div>
-      <div class="pattern-card"><div class="pattern-label">Pattern #4</div><h3>Filter = New Question</h3><p><strong>Use when:</strong> You want to focus the answer on one part of the data.</p><p><strong>Recipe:</strong> Start with a broad chart. Apply a filter. Restate the focused question.</p></div>
-      <div class="pattern-card"><div class="pattern-label">Pattern #5</div><h3>One Number Answer</h3><p><strong>Use when:</strong> One number answers the most important question in the room.</p><p><strong>Recipe:</strong> Build a card, verify the calculation, then read it as a sentence.</p></div>
-      <div class="pattern-card"><div class="pattern-label">Pattern #6</div><h3>Design for the Reader</h3><p><strong>Use when:</strong> Your report needs to be understood by someone who did not build it.</p><p><strong>Recipe:</strong> Plain-English labels, logical layout, intentional color, and useful slicers.</p></div>
-      <div class="pattern-card"><div class="pattern-label">Pattern #7</div><h3>Publish, Test, Improve</h3><p><strong>Use when:</strong> Your report needs to leave your computer and be used by another person.</p><p><strong>Recipe:</strong> Publish, test, share, ask what the report communicates, then improve it.</p></div>
-      <div class="pattern-card"><div class="pattern-label">Pattern #8</div><h3>Build the Full Loop</h3><p><strong>Use when:</strong> You are ready to turn a real question into a useful report.</p><p><strong>Recipe:</strong> Question → Data → Visuals → Design → Publish → Feedback → Present.</p></div>
+      <h2>Volume 1 — Seeing Data</h2>
+      <p>Eight patterns for working with data, building reports, and sharing them with a real audience.</p>
 
-      <h2>Spot the Pattern Practice</h2>
+      <div class="pattern-card"><div class="pattern-label">Pattern #1</div><h3>Group &amp; Count</h3><p><strong>Use when:</strong> You need to know how many records are in each category.</p><p><strong>Recipe:</strong> Category → X-axis. Record identifier → Y-axis. Power BI counts the records. You answer the question.</p><p><strong>Example:</strong> Unit → X-axis. Name → Y-axis. Power BI counts people by unit.</p></div>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #2</div><h3>Change the Lens</h3><p><strong>Use when:</strong> The same data may need a different visual to answer a different question.</p><p><strong>Recipe:</strong> Keep the data the same. Keep the fields the same. Change the chart type. Notice what becomes easier or harder to see.</p><p><strong>Example:</strong> Bar chart answers "who has the most?" Pie chart answers "what percentage of the whole?" Same data, different lens.</p></div>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #3</div><h3>Read the Shape</h3><p><strong>Use when:</strong> You receive data and need to know what questions it can support.</p><p><strong>Recipe:</strong> Label every column C (category) or N (number). List questions the data can answer. List questions it cannot. Know the shape before you build.</p><p><strong>Example:</strong> No date column → cannot answer "how has this changed over time?" Find out if a date column exists before building a trend report.</p></div>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #4</div><h3>Filter = New Question</h3><p><strong>Use when:</strong> You want to focus the answer on one part of the data.</p><p><strong>Recipe:</strong> Start with a broad chart using Pattern #1. Apply a filter. Restate the new, focused question out loud.</p><p><strong>Example:</strong> "How many people are in each rank?" → filter to 129th Wing → "How many people in the 129th Wing are in each rank?"</p></div>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #5</div><h3>One Number Answer</h3><p><strong>Use when:</strong> One number answers the most important question in the room.</p><p><strong>Recipe:</strong> Build a card visual. Choose the correct calculation (Count, Sum, Average). Read it as a sentence: "There are [number] [thing]." Label it so anyone understands it instantly.</p><p><strong>Example:</strong> Card showing Count of Name = 12. Label: "Personnel with incomplete training."</p></div>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #6</div><h3>Design for the Reader</h3><p><strong>Use when:</strong> Your report needs to be understood by someone who did not build it.</p><p><strong>Recipe:</strong> Name the specific reader. Rewrite all labels in plain English. Put the most important information top-left. Use color to guide attention to one thing. Add slicers where the reader needs control. Test with a real person.</p></div>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #7</div><h3>Publish, Test, Improve</h3><p><strong>Use when:</strong> Your report needs to leave your computer and be used by another person.</p><p><strong>Recipe:</strong> Publish to Power BI Service (not the .pbix file). Open the link yourself and test it. Share with one person. Ask "what does this report tell you?" Improve based on their answer.</p></div>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #8</div><h3>Build the Full Loop</h3><p><strong>Use when:</strong> You are ready to turn a real question into a complete, published, presented report.</p><p><strong>Recipe:</strong> Question → Read the Shape → Group &amp; Count → Change the Lens → Filter = New Question → One Number Answer → Design for the Reader → Publish, Test, Improve → Present.</p></div>
+
+      <h2>Volume 2 — Thinking in Data</h2>
+      <p>Eight patterns for connecting data, calculating answers, and building dashboards that support real decisions.</p>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #9</div><h3>Connect the Tables</h3><p><strong>Use when:</strong> A question requires data from more than one spreadsheet.</p><p><strong>Recipe:</strong> Find the question that needs two sources. Import both tables. Find the linking column — the column that appears in both. In Model view, drag the linking column from one table to the other. Build a chart using columns from both tables.</p><p><strong>Example:</strong> Unit (Personnel) → X-axis. Name (Personnel) → Y-axis. Status = Incomplete (Training) → Filter. Result: incomplete training count by unit.</p></div>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #10</div><h3>Read the Trend</h3><p><strong>Use when:</strong> You need to know where something is going — not just where it is now.</p><p><strong>Recipe:</strong> Find the date column. Place it on the X-axis. Place your measure on the Y-axis. Use a line chart — not a bar chart. Add a category to the Legend to compare multiple trends. Read direction, not just individual data points.</p><p><strong>Example:</strong> Month → X-axis. Readiness → Y-axis. Unit → Legend. Story: Unit 144 is closing the gap with Unit 129.</p></div>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #11</div><h3>Derive the Answer</h3><p><strong>Use when:</strong> The number you need doesn't exist in the data yet.</p><p><strong>Recipe:</strong> Write the calculation in plain English first. If you can't say it out loud, you're not ready to write it in DAX. Right-click the table → New measure. Translate plain English to DAX. Test. Use the measure in cards and charts — Power BI applies it automatically across every filter.</p><p><strong>Example:</strong> "Percentage of people who completed training" → DIVIDE(COUNTROWS(FILTER(...Status="Complete"...)), COUNTROWS(Training)) * 100</p></div>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #12</div><h3>Drill to the Detail</h3><p><strong>Use when:</strong> A summary number raises a follow-up question.</p><p><strong>Recipe:</strong> Write the summary question and the follow-up question. Create a hierarchy: right-click top-level field → Create hierarchy → add sub-levels. Drag the hierarchy to the X-axis. Enable drill mode using the arrow controls on the chart. Click a bar to drill down. Click the up arrow to return.</p><p><strong>Example:</strong> Click Unit 129 → see breakdown by Rank. Click up arrow → return to all units.</p></div>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #13</div><h3>Design for the Decision</h3><p><strong>Use when:</strong> The goal is a specific decision, not just understanding.</p><p><strong>Recipe:</strong> Name the decision in one sentence. Name the must-see number. Name the two or three supporting visuals. Remove everything else. Title the report as the decision — not the data. Test with the actual decision-maker.</p><p><strong>Example:</strong> Decision: "Which unit gets priority scheduling?" Must-see: incomplete training count by unit. Context: trend over 6 months. Remove: everything else.</p></div>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #14</div><h3>Keep It Current</h3><p><strong>Use when:</strong> Your report needs to show current data without manual updates.</p><p><strong>Recipe:</strong> Move your source data to SharePoint or OneDrive for Business. In Power BI Desktop: Data source settings → Change Source → point to the shared location. Publish to Power BI Service. Dataset settings → Scheduled refresh → On → set frequency. Enable refresh failure notifications.</p></div>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #15</div><h3>Close the Gap</h3><p><strong>Use when:</strong> A question can't be answered because the data doesn't support it yet.</p><p><strong>Recipe:</strong> Write the question. Diagnose the gap: missing calculation → Pattern #11. Missing column → create a calculated column with DAX. Missing data source → Pattern #9. Close the gap. Answer the question that was impossible before.</p><p><strong>Example:</strong> "Which people are overdue — not just incomplete?" → Missing column. IF(Status="Incomplete" AND DueDate&lt;TODAY(), "Overdue", "Current"). Build the chart. Answer answered.</p></div>
+
+      <div class="pattern-card"><div class="pattern-label">Pattern #16</div><h3>Build the Full System</h3><p><strong>Use when:</strong> You are ready to move from a real unit need to a live, connected, decision-ready dashboard.</p><p><strong>Recipe:</strong> Name the decision → Read the Shape → Connect the Tables → Close the Gaps → Write measures in plain English → Create measures in DAX → Build the visuals → Design for the Decision → Move data to SharePoint → Configure scheduled refresh → Publish, Test, Improve → Present.</p></div>
+
+      <h2>Spot the Pattern — Volume 2 Scenarios</h2>
       <div class="step-block">
-        <div class="step-header">Scenario Practice</div>
+        <div class="step-header">Choose the Pattern Before You Click</div>
         <div class="step-content">
-          <p><strong>Scenario:</strong> Your commander asks, "Which unit has the most overdue training?"</p>
-          <p><strong>Start with:</strong> Pattern #1, Group & Count. Then use Pattern #3 to confirm the data supports the question, and Pattern #4 if you need to focus on one training type.</p>
-          <p><strong>Scenario:</strong> Your audience already knows totals, but they are arguing about percentages.</p>
-          <p><strong>Start with:</strong> Pattern #2, Change the Lens.</p>
-          <p><strong>Scenario:</strong> You open a spreadsheet and cannot tell what questions it can answer.</p>
-          <p><strong>Start with:</strong> Pattern #3, Read the Shape.</p>
+          <p><strong>Scenario:</strong> Your commander asks, "Which unit has the most people with incomplete training?" You have a personnel file and a training file, both with a Name column.</p>
+          <p><strong>Start with:</strong> Pattern #9 (Connect the Tables). Find the linking column. Build the relationship. Then Pattern #1 (Group &amp; Count) with Pattern #4 (Filter = New Question).</p>
+          <p><strong>Scenario:</strong> Your supervisor asks, "Are things getting better or worse?" You have monthly readiness data.</p>
+          <p><strong>Start with:</strong> Pattern #10 (Read the Trend). Date on X-axis. Readiness on Y-axis. Line chart.</p>
+          <p><strong>Scenario:</strong> Leadership needs to know the percentage of personnel who are training-complete — but that number isn't in any spreadsheet.</p>
+          <p><strong>Start with:</strong> Pattern #11 (Derive the Answer). Write the plain English sentence. Translate to DAX. Test. Card visual with Pattern #5.</p>
+          <p><strong>Scenario:</strong> The readiness number at the unit level looks fine, but someone suspects one specific rank is pulling it down.</p>
+          <p><strong>Start with:</strong> Pattern #12 (Drill to the Detail). Build a Unit → Rank hierarchy. Enable drill mode. Click the unit to see the rank breakdown.</p>
+          <p><strong>Scenario:</strong> You've built a report but nobody uses it because it's always a week out of date.</p>
+          <p><strong>Start with:</strong> Pattern #14 (Keep It Current). Move the source to SharePoint. Configure scheduled refresh.</p>
         </div>
       </div>
+
+      <h2>The Complete Pattern Sequence</h2>
+      <table class="ref-table">
+        <thead><tr><th>Pattern</th><th>Name</th><th>Core Question</th><th>Volume</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Group &amp; Count</td><td>How many records are in each category?</td><td>1</td></tr>
+          <tr><td>2</td><td>Change the Lens</td><td>Which picture makes this answer clearest?</td><td>1</td></tr>
+          <tr><td>3</td><td>Read the Shape</td><td>What can and can't this data answer?</td><td>1</td></tr>
+          <tr><td>4</td><td>Filter = New Question</td><td>What if I focus on just one part?</td><td>1</td></tr>
+          <tr><td>5</td><td>One Number Answer</td><td>What is the single most important number?</td><td>1</td></tr>
+          <tr><td>6</td><td>Design for the Reader</td><td>Will my audience understand without me explaining?</td><td>1</td></tr>
+          <tr><td>7</td><td>Publish, Test, Improve</td><td>Does the report communicate once someone else uses it?</td><td>1</td></tr>
+          <tr><td>8</td><td>Build the Full Loop</td><td>Can I move from question to published report?</td><td>1</td></tr>
+          <tr><td>9</td><td>Connect the Tables</td><td>What question requires two data sources?</td><td>2</td></tr>
+          <tr><td>10</td><td>Read the Trend</td><td>Where is this going — and how did we get here?</td><td>2</td></tr>
+          <tr><td>11</td><td>Derive the Answer</td><td>What number do I need that isn't in the data yet?</td><td>2</td></tr>
+          <tr><td>12</td><td>Drill to the Detail</td><td>What's hiding underneath the summary?</td><td>2</td></tr>
+          <tr><td>13</td><td>Design for the Decision</td><td>What does this person need to make the right call?</td><td>2</td></tr>
+          <tr><td>14</td><td>Keep It Current</td><td>How do I make this stay current without manual work?</td><td>2</td></tr>
+          <tr><td>15</td><td>Close the Gap</td><td>How do I answer a question the data can't support yet?</td><td>2</td></tr>
+          <tr><td>16</td><td>Build the Full System</td><td>Can I move from unit need to live, decision-ready dashboard?</td><td>2</td></tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div class="lesson-nav-footer">
+      <a href="/pattern_fluency/index.html" class="nav-btn">← Home</a>
+      <a href="/pattern_fluency/lessons/lesson-9.html" class="nav-btn primary">Begin Volume 2 →</a>
     </div>
   </main>
 </div>

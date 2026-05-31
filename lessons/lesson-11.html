@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 11: Your First Calculation — Pattern Fluency</title>
+  <link rel="stylesheet" href="/pattern_fluency/css/style.css">
+  <link rel="stylesheet" href="/pattern_fluency/css/pattern-additions.css">
+</head>
+<body>
+<button class="mobile-toggle" id="mobile-toggle">☰</button>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="site-wrapper">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="/pattern_fluency/index.html" class="wordmark">Pattern Fluency</a>
+      <span class="sub">Power BI · Volume 2</span>
+    </div>
+    <div class="sidebar-nav">
+      <div class="nav-section"><div class="nav-section-label">Start Here</div></div>
+      <a href="/pattern_fluency/index.html" class="nav-link">Home</a>
+      <a href="/pattern_fluency/philosophy.html" class="nav-link">The Method</a>
+      <a href="/pattern_fluency/reference.html" class="nav-link">Quick Reference</a>
+      <a href="/pattern_fluency/pattern-library.html" class="nav-link">Pattern Library</a>
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 1 — Seeing Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-1.html" class="nav-link"><span class="num">01</span>Answer Your First Question</a>
+<a href="/pattern_fluency/lessons/lesson-2.html" class="nav-link"><span class="num">02</span>Different Pictures</a>
+<a href="/pattern_fluency/lessons/lesson-3.html" class="nav-link"><span class="num">03</span>Your Data Has a Shape</a>
+<a href="/pattern_fluency/lessons/lesson-4.html" class="nav-link"><span class="num">04</span>Filters Change the Question</a>
+<a href="/pattern_fluency/lessons/lesson-5.html" class="nav-link"><span class="num">05</span>One Number Tells a Story</a>
+<a href="/pattern_fluency/lessons/lesson-6.html" class="nav-link"><span class="num">06</span>Make It Yours</a>
+<a href="/pattern_fluency/lessons/lesson-7.html" class="nav-link"><span class="num">07</span>Share What You See</a>
+<a href="/pattern_fluency/lessons/lesson-8.html" class="nav-link"><span class="num">08</span>Capstone</a>
+
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 2 — Thinking in Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-9.html" class="nav-link"><span class="num">09</span>Make Two Spreadsheets Talk</a>
+<a href="/pattern_fluency/lessons/lesson-10.html" class="nav-link"><span class="num">10</span>Patterns Over Time</a>
+<a href="/pattern_fluency/lessons/lesson-11.html" class="nav-link active"><span class="num">11</span>Your First Calculation</a>
+<a href="/pattern_fluency/lessons/lesson-12.html" class="nav-link"><span class="num">12</span>Drill Down, Not Just Across</a>
+<a href="/pattern_fluency/lessons/lesson-13.html" class="nav-link"><span class="num">13</span>Design for One Person</a>
+<a href="/pattern_fluency/lessons/lesson-14.html" class="nav-link"><span class="num">14</span>Automate the Update</a>
+<a href="/pattern_fluency/lessons/lesson-15.html" class="nav-link"><span class="num">15</span>Answer the Unanswerable</a>
+<a href="/pattern_fluency/lessons/lesson-16.html" class="nav-link"><span class="num">16</span>Capstone — Build a Dashboard That Matters</a>
+
+    </div>
+    <div class="sidebar-footer">Pattern Fluency Method · v2.0</div>
+  </nav>
+  <main class="main-content">
+    <div class="topbar">
+      <div class="topbar-breadcrumb">Volume 2 <span>/ Lesson 11</span></div>
+      <div class="progress-indicator"><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot current"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div></div>
+    </div>
+    <div class="page-hero">
+      <div class="hero-eyebrow">Lesson 11 of 16 &nbsp;·&nbsp; Volume 2</div>
+      <h1>Your First Calculation</h1>
+    </div>
+    <div class="belief-strip">
+  <div class="belief-card current">
+    <div class="belief-label">Before This Lesson</div>
+    <div class="belief-text">Power BI shows what's in the data. I work with the numbers that exist.</div>
+  </div>
+  <div class="belief-arrow">→</div>
+  <div class="belief-card target">
+    <div class="belief-label">After This Lesson</div>
+    <div class="belief-text">Power BI can calculate numbers that don't exist yet. I can derive any answer the data supports.</div>
+  </div>
+</div>
+    <div class="lesson-body">
+
+<h2>Welcome Back</h2>
+<p>Lessons 9 and 10 taught you to connect data and read trends. Both lessons used numbers that already existed in your spreadsheet.</p>
+<p>Today you're going to calculate a number that doesn't exist yet.</p>
+<p>In Power BI, these are called <strong>measures</strong>. A measure is a calculation you define — and Power BI updates it automatically whenever the data changes or a filter is applied.</p>
+<p>This is the lesson that separates reporting from analysis.</p>
+
+<div class="coach-pause">
+  <div class="label">Pattern Review</div>
+  <p>Pattern #5 (One Number Answer) taught you to use card visuals to show the most important number. But you were always showing a number that existed in the data — a count, a sum, an average.</p>
+  <p>Today you'll create a number that doesn't exist yet. Instead of asking "what number is in my data?" you'll ask "what number do I need to create?"</p>
+</div>
+
+<h2>Before We Open Power BI</h2>
+<p>Think about a calculation your work actually needs — one that isn't directly in your data.</p>
+<p>Examples:</p>
+<p>"What percentage of our unit has completed training?" — not in the data, but calculable from it.</p>
+<p>"How many days since the last inspection?" — not in the data, but derivable.</p>
+<p>"What is our average readiness score excluding the lowest month?" — not stored, but computable.</p>
+<p>Write your calculation in plain English before opening anything. That sentence is your measure.</p>
+
+<div class="stop-think">
+  <div class="label">The Plain English Rule</div>
+  <p>In Power BI, calculations are written in a language called DAX. But DAX always comes second. The first step is always writing the calculation in plain English.</p>
+  <p>If you can't write it in plain English, you can't write it in DAX.</p>
+  <p>If you can write it in plain English, DAX is just the translation.</p>
+</div>
+
+<h2>Step 1 — Write the Calculation in Plain English</h2>
+<p>Use the training data from Lesson 9.</p>
+<p>The calculation you want: <strong>"The percentage of people who have completed training."</strong></p>
+<p>In plain English:</p>
+<p>Count the people with Status = Complete. Divide by the total count of people. Multiply by 100.</p>
+<p>That's the measure. Now we write it in DAX.</p>
+
+<h2>Step 2 — Create Your First Measure</h2>
+<div class="step-block">
+  <div class="step-header">Writing the Measure</div>
+  <div class="step-content">
+    <p>In Power BI Desktop, look at the field list on the right. Find your Training table.</p>
+    <p>Right-click the Training table name. Choose <span class="step-action">New measure</span>.</p>
+    <p>A formula bar appears at the top of the screen. You'll see a cursor waiting for you to type.</p>
+    <p>Type this measure exactly:</p>
+    <p style="font-family: monospace; background: #1e3355; color: #f59e0b; padding: 12px 16px; border-radius: 6px; margin: 8px 0;">
+      Completion Rate = <br>
+      DIVIDE(<br>
+      &nbsp;&nbsp;COUNTROWS(FILTER(Training, Training[Status] = "Complete")),<br>
+      &nbsp;&nbsp;COUNTROWS(Training)<br>
+      ) * 100
+    </p>
+    <p>Press <span class="step-action">Enter</span> or click the checkmark.</p>
+    <p>A new field appears in the Training table with a calculator icon. That's your measure.</p>
+  </div>
+</div>
+
+<div class="stop-think">
+  <div class="label">Reading the DAX — Plain English Translation</div>
+  <p><strong>COUNTROWS(FILTER(Training, Training[Status] = "Complete"))</strong> — count the rows in Training where Status equals "Complete."</p>
+  <p><strong>COUNTROWS(Training)</strong> — count all rows in Training.</p>
+  <p><strong>DIVIDE(first, second)</strong> — divide the first number by the second safely (no divide-by-zero errors).</p>
+  <p><strong>* 100</strong> — convert to a percentage.</p>
+  <p>Every word in the DAX maps directly to the plain English sentence you wrote first.</p>
+</div>
+
+<h2>Step 3 — Use the Measure in a Visual</h2>
+<div class="step-block">
+  <div class="step-header">Putting the Measure to Work</div>
+  <div class="step-content">
+    <p>Click a blank area of the canvas. Select the Card visual.</p>
+    <p>Drag your <strong>Completion Rate</strong> measure into the card.</p>
+    <p>Look at the number. Does it match what you'd calculate by hand?</p>
+    <p>Now drag <strong>Unit</strong> from the Personnel table to the X-axis of a bar chart.</p>
+    <p>Drag <strong>Completion Rate</strong> to the Y-axis.</p>
+    <p>Look at what happened. Power BI calculated the completion rate separately for each unit.</p>
+    <p>You created one measure. Power BI applied it across every slice of your data automatically.</p>
+  </div>
+</div>
+
+<div class="coach-pause">
+  <div class="label">What You Just Learned</div>
+  <p>You may think you just learned DAX syntax. You didn't. You learned your eleventh Pattern Fluency pattern. The pattern is: write the calculation in plain English first. Translate to DAX second. Test whether both say the same thing. Then let Power BI apply the measure automatically across every filter and slice.</p>
+</div>
+
+<div class="pattern-card">
+  <div class="pattern-label">Pattern #11</div>
+  <h3>Derive the Answer</h3>
+  <p><strong>Question:</strong> What number do I need that isn't in the data yet?</p>
+  <p><strong>Recipe:</strong></p>
+  <ul>
+    <li>Write the calculation in plain English. If you can't, you're not ready to write it in DAX.</li>
+    <li>Right-click the table → New measure.</li>
+    <li>Translate your plain English sentence into DAX.</li>
+    <li>Test: does the measure return the number you expect?</li>
+    <li>Use the measure in a card or a chart — Power BI applies it automatically across every filter.</li>
+  </ul>
+  <p><strong>Example:</strong> "Percentage of people who completed training" → DIVIDE(COUNTROWS(FILTER(...)), COUNTROWS(...)) * 100.</p>
+</div>
+
+<h2>Drill #11</h2>
+<div class="drill-block">
+  <div class="drill-header"><span class="icon">▶</span> The Plain English Drill</div>
+  <p>Write a second calculation in plain English. Something different from completion rate.</p>
+  <p>Example: "The number of people with incomplete training" or "The total headcount in the Personnel table."</p>
+  <p>Write the plain English sentence first. Then write the DAX. Then build the card.</p>
+  <p>Read the card as a sentence using the Meaning Check from Pattern #5.</p>
+  <p>Does the sentence match your plain English description? If yes — the measure is correct. If no — fix the DAX until it does.</p>
+  <p>Repeat with two more calculations. Three total.</p>
+</div>
+
+<h2>Reflection</h2>
+<ul class="numbered-list">
+  <li><span class="n">01</span>What was the plain English sentence for your measure before you wrote the DAX?</li>
+  <li><span class="n">02</span>Did the measure return the number you expected? If not, what was different?</li>
+  <li><span class="n">03</span>What happened when you put the measure on a bar chart with Unit on the X-axis?</li>
+  <li><span class="n">04</span>What's the difference between a measure and a number that already exists in the data?</li>
+  <li><span class="n">05</span>What calculation does your unit need that isn't currently in any spreadsheet?</li>
+</ul>
+
+<h2>Challenge</h2>
+<p>Write a measure that answers a real question your unit needs.</p>
+<p>Start with the plain English sentence. Write it before you open the measure editor.</p>
+<p>Translate it to DAX. Test the result.</p>
+<p>Place the measure in a card visual with a plain English label.</p>
+<p>Show it to one person. Ask: "What does this number tell you?"</p>
+
+<h2>Teach Back</h2>
+<p>Explain what a measure is — in plain language, not DAX.</p>
+<p>Explain why the plain English sentence comes before the DAX.</p>
+<p>Explain Pattern #11 in plain language:</p>
+<p><strong>Write what you want to calculate in one sentence. Translate that sentence to DAX. Test it. Use it everywhere.</strong></p>
+
+<h2>Common Mistakes</h2>
+<div class="mistake-block"><strong>Mistake 1 — Writing DAX before writing plain English</strong><p>Every time. If you open the measure editor before you can say the calculation out loud, you're guessing. Write the sentence first. Always.</p></div>
+<div class="mistake-block"><strong>Mistake 2 — Confusing measures with calculated columns</strong><p>Power BI has two ways to add calculations: measures and calculated columns. Measures calculate dynamically based on the current filters. Calculated columns calculate once when the data loads. For most reporting needs, measures are what you want.</p></div>
+<div class="mistake-block"><strong>Mistake 3 — Not testing the result</strong><p>Always verify your measure against a manual calculation. Count the complete rows by hand. Divide by the total. If the measure doesn't match, the DAX is wrong — not your math.</p></div>
+<div class="mistake-block"><strong>Mistake 4 — Leaving the measure name as the default</strong><p>Power BI names your measure "Measure" by default. Rename it immediately — something like "Completion Rate %" — or you'll lose track of what each measure does when you have several.</p></div>
+
+<div class="homework-block">
+  <div class="hw-label">Homework</div>
+  <p>Write three plain English sentences describing calculations your unit actually needs.</p>
+  <p>For each one: create the measure in Power BI, test it, and place it in a card with a clear label.</p>
+  <p>Save the file. You'll use these measures as you build toward the capstone.</p>
+</div>
+
+<div class="summary-block">
+  <div class="sum-label">Lesson Summary</div>
+  <p>Before this lesson, Power BI showed what was in the data.</p>
+  <p>After this lesson, Power BI can calculate things that weren't in the data yet.</p>
+  <p>You also learned Pattern #11: <strong>Derive the Answer</strong>.</p>
+  <p>Plain English first. DAX second. Test always. Use everywhere.</p>
+  <p>In Lesson 12, you'll learn to drill from summary to detail — and discover what's hiding underneath the numbers.</p>
+</div>
+
+    </div>
+    <div class="lesson-nav-footer"><a href="/pattern_fluency/lessons/lesson-10.html" class="nav-btn">← Lesson 10</a><a href="/pattern_fluency/lessons/lesson-12.html" class="nav-btn primary">Lesson 12 →</a></div>
+  </main>
+</div>
+<script src="/pattern_fluency/js/main.js"></script>
+</body>
+</html>

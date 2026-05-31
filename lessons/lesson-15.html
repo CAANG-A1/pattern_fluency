@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 15: Answer the Unanswerable — Pattern Fluency</title>
+  <link rel="stylesheet" href="/pattern_fluency/css/style.css">
+  <link rel="stylesheet" href="/pattern_fluency/css/pattern-additions.css">
+</head>
+<body>
+<button class="mobile-toggle" id="mobile-toggle">☰</button>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="site-wrapper">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="/pattern_fluency/index.html" class="wordmark">Pattern Fluency</a>
+      <span class="sub">Power BI · Volume 2</span>
+    </div>
+    <div class="sidebar-nav">
+      <div class="nav-section"><div class="nav-section-label">Start Here</div></div>
+      <a href="/pattern_fluency/index.html" class="nav-link">Home</a>
+      <a href="/pattern_fluency/philosophy.html" class="nav-link">The Method</a>
+      <a href="/pattern_fluency/reference.html" class="nav-link">Quick Reference</a>
+      <a href="/pattern_fluency/pattern-library.html" class="nav-link">Pattern Library</a>
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 1 — Seeing Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-1.html" class="nav-link"><span class="num">01</span>Answer Your First Question</a>
+<a href="/pattern_fluency/lessons/lesson-2.html" class="nav-link"><span class="num">02</span>Different Pictures</a>
+<a href="/pattern_fluency/lessons/lesson-3.html" class="nav-link"><span class="num">03</span>Your Data Has a Shape</a>
+<a href="/pattern_fluency/lessons/lesson-4.html" class="nav-link"><span class="num">04</span>Filters Change the Question</a>
+<a href="/pattern_fluency/lessons/lesson-5.html" class="nav-link"><span class="num">05</span>One Number Tells a Story</a>
+<a href="/pattern_fluency/lessons/lesson-6.html" class="nav-link"><span class="num">06</span>Make It Yours</a>
+<a href="/pattern_fluency/lessons/lesson-7.html" class="nav-link"><span class="num">07</span>Share What You See</a>
+<a href="/pattern_fluency/lessons/lesson-8.html" class="nav-link"><span class="num">08</span>Capstone</a>
+
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 2 — Thinking in Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-9.html" class="nav-link"><span class="num">09</span>Make Two Spreadsheets Talk</a>
+<a href="/pattern_fluency/lessons/lesson-10.html" class="nav-link"><span class="num">10</span>Patterns Over Time</a>
+<a href="/pattern_fluency/lessons/lesson-11.html" class="nav-link"><span class="num">11</span>Your First Calculation</a>
+<a href="/pattern_fluency/lessons/lesson-12.html" class="nav-link"><span class="num">12</span>Drill Down, Not Just Across</a>
+<a href="/pattern_fluency/lessons/lesson-13.html" class="nav-link"><span class="num">13</span>Design for One Person</a>
+<a href="/pattern_fluency/lessons/lesson-14.html" class="nav-link"><span class="num">14</span>Automate the Update</a>
+<a href="/pattern_fluency/lessons/lesson-15.html" class="nav-link active"><span class="num">15</span>Answer the Unanswerable</a>
+<a href="/pattern_fluency/lessons/lesson-16.html" class="nav-link"><span class="num">16</span>Capstone — Build a Dashboard That Matters</a>
+
+    </div>
+    <div class="sidebar-footer">Pattern Fluency Method · v2.0</div>
+  </nav>
+  <main class="main-content">
+    <div class="topbar">
+      <div class="topbar-breadcrumb">Volume 2 <span>/ Lesson 15</span></div>
+      <div class="progress-indicator"><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot current"></div><div class="progress-dot"></div></div>
+    </div>
+    <div class="page-hero">
+      <div class="hero-eyebrow">Lesson 15 of 16 &nbsp;·&nbsp; Volume 2</div>
+      <h1>Answer the Unanswerable</h1>
+    </div>
+    <div class="belief-strip">
+  <div class="belief-card current">
+    <div class="belief-label">Before This Lesson</div>
+    <div class="belief-text">Some questions can't be answered because the data doesn't support them.</div>
+  </div>
+  <div class="belief-arrow">→</div>
+  <div class="belief-card target">
+    <div class="belief-label">After This Lesson</div>
+    <div class="belief-text">Unanswerable questions are engineering problems. Every gap has a solution.</div>
+  </div>
+</div>
+    <div class="lesson-body">
+
+<h2>Welcome Back</h2>
+<p>Every lesson in Volume 2 has built your capability: connected tables, trends, measures, drill-down, decision-first design, and automated refresh.</p>
+<p>This lesson starts differently. It starts with a question you cannot currently answer.</p>
+<p>Think about the last question someone asked you that you couldn't answer with your current data. Not a question you didn't know how to visualize — a question your data literally couldn't support yet.</p>
+<p>Today you're going to close that gap.</p>
+
+<div class="coach-pause">
+  <div class="label">Pattern Review</div>
+  <p>Pattern #3 (Read the Shape) taught you to identify what your data can and cannot answer. Today's pattern takes the next step: when you find a question the data can't answer, you engineer a solution. You don't accept the gap — you close it.</p>
+</div>
+
+<h2>Before We Open Power BI</h2>
+<div class="stop-think">
+  <div class="label">Find Your Gap</div>
+  <p>Write down a question that your current data cannot answer. This is the question for this lesson.</p>
+  <p>Common gaps in military and government data:</p>
+  <p>"How long does it take from request to approval?" — requires a start date and an end date, not just one date.</p>
+  <p>"What percentage of our training is overdue, not just incomplete?" — requires a deadline date compared to today.</p>
+  <p>"Which people appear in our personnel roster but not in our training records?" — requires finding what's missing between two tables.</p>
+  <p>Write your gap question down. That's the problem this lesson solves.</p>
+</div>
+
+<h2>Three Types of Gaps — and How to Close Them</h2>
+<p>Most data gaps fall into one of three categories.</p>
+
+<h3>Gap Type 1 — Missing Calculation</h3>
+<p>The data exists. The calculation hasn't been created yet.</p>
+<p><strong>Solution:</strong> Pattern #11 (Derive the Answer). Write the calculation in plain English. Create a measure.</p>
+<p><strong>Example:</strong> "Days since last training" — both the training date and today's date exist. The calculation <code>TODAY() - MAX(Training[Date])</code> closes the gap.</p>
+
+<h3>Gap Type 2 — Missing Column</h3>
+<p>The data is there but not in the right shape. You need a column that doesn't exist yet.</p>
+<p><strong>Solution:</strong> Create a calculated column or transform the data in Power Query.</p>
+
+<div class="step-block">
+  <div class="step-header">Creating a Calculated Column</div>
+  <div class="step-content">
+    <p>In the field list, right-click the table that needs the new column.</p>
+    <p>Choose <span class="step-action">New column</span>.</p>
+    <p>Write a DAX formula. Example — to flag overdue training:</p>
+    <p style="font-family: monospace; background: #1e3355; color: #f59e0b; padding: 10px 14px; border-radius: 6px; margin: 8px 0;">
+      Overdue = IF(Training[Status] = "Incomplete" && Training[DueDate] &lt; TODAY(), "Overdue", "Not Overdue")
+    </p>
+    <p>Press Enter. The new column appears in the table and can be used in visuals immediately.</p>
+  </div>
+</div>
+
+<h3>Gap Type 3 — Missing Connection</h3>
+<p>The answer requires data from a source that isn't in Power BI yet.</p>
+<p><strong>Solution:</strong> Add the missing data source and create a relationship using Pattern #9 (Connect the Tables).</p>
+<p><strong>Example:</strong> "Which people are in Personnel but not in Training?" — requires both tables and a way to find the non-matching rows.</p>
+
+<div class="step-block">
+  <div class="step-header">Finding What's Missing Between Two Tables</div>
+  <div class="step-content">
+    <p>With both tables connected via a relationship, build a table visual.</p>
+    <p>Add <strong>Name</strong> from Personnel to the table.</p>
+    <p>Add <strong>Status</strong> from Training to the table.</p>
+    <p>Filter Status to show only blank values (people with no matching training record).</p>
+    <p>The result: a list of people who exist in Personnel but have no entry in Training.</p>
+    <p>That gap was invisible before both tables were connected.</p>
+  </div>
+</div>
+
+<div class="coach-pause">
+  <div class="label">What You Just Learned</div>
+  <p>You may think you just learned advanced DAX. You didn't. You learned your fifteenth Pattern Fluency pattern. When a question can't be answered, you diagnose why: missing calculation, missing column, or missing data source. Then you apply the right tool to close the gap. The question drives the solution — not the other way around.</p>
+</div>
+
+<div class="pattern-card">
+  <div class="pattern-label">Pattern #15</div>
+  <h3>Close the Gap</h3>
+  <p><strong>Question:</strong> How do I answer a question my current data doesn't support?</p>
+  <p><strong>Recipe:</strong></p>
+  <ul>
+    <li>Write the question that can't be answered.</li>
+    <li>Diagnose the gap: is it a missing calculation, a missing column, or a missing data source?</li>
+    <li>Missing calculation → Pattern #11: create a measure.</li>
+    <li>Missing column → create a calculated column using a DAX IF or date formula.</li>
+    <li>Missing data source → Pattern #9: import it and connect it.</li>
+    <li>Test: can you now answer the question?</li>
+  </ul>
+  <p><strong>Example:</strong> "Which people are overdue — not just incomplete?" → Missing column. Create: IF(Status = "Incomplete" AND DueDate &lt; TODAY(), "Overdue", "Current"). Build the chart. Answer the question.</p>
+</div>
+
+<h2>Drill #15</h2>
+<div class="drill-block">
+  <div class="drill-header"><span class="icon">▶</span> The Gap Diagnosis Drill</div>
+  <p>Write three questions that your current data cannot answer. One for each gap type: missing calculation, missing column, missing data source.</p>
+  <p>For each question, diagnose the gap type out loud: "This is a missing ___ gap."</p>
+  <p>For the missing calculation: write the plain English sentence and create the measure.</p>
+  <p>For the missing column: write the DAX formula and create the calculated column.</p>
+  <p>For the missing data source: identify what file or system contains the missing data.</p>
+  <p>Close at least two of the three gaps before moving to the reflection.</p>
+</div>
+
+<h2>Reflection</h2>
+<ul class="numbered-list">
+  <li><span class="n">01</span>What question couldn't you answer before this lesson — and can you answer it now?</li>
+  <li><span class="n">02</span>Which gap type did you encounter? How did you diagnose it?</li>
+  <li><span class="n">03</span>What question does your unit have that still can't be answered — and what would it take to close that gap?</li>
+  <li><span class="n">04</span>How does closing a data gap change what's possible for decision-makers?</li>
+  <li><span class="n">05</span>What's the difference between an analyst who accepts data gaps and one who closes them?</li>
+</ul>
+
+<h2>Challenge</h2>
+<p>Take the most important unanswered question from your unit's work.</p>
+<p>Diagnose the gap. Apply the right pattern.</p>
+<p>Close the gap. Build the visual that answers the question.</p>
+<p>Present the answer to the person who originally asked the question.</p>
+<p>Watch their reaction.</p>
+
+<h2>Teach Back</h2>
+<p>Explain the three types of data gaps and how to identify which type you're facing.</p>
+<p>Explain Pattern #15 in plain language:</p>
+<p><strong>Name the question. Diagnose the gap. Apply the right tool. Close it. Answer the question that was impossible before.</strong></p>
+
+<h2>Common Mistakes</h2>
+<div class="mistake-block"><strong>Mistake 1 — Accepting gaps as permanent</strong><p>"Our system doesn't track that" is often the beginning of a conversation, not the end of one. Data gaps are solvable engineering problems, not permanent limitations. Ask who tracks the missing data and whether it can be exported.</p></div>
+<div class="mistake-block"><strong>Mistake 2 — Creating a calculated column when a measure is better</strong><p>Calculated columns store values for every row — they increase the model size. Measures calculate dynamically and adjust to filters. When in doubt, use a measure. Use calculated columns only when you need the result to appear as a field that can be used in hierarchies or relationships.</p></div>
+<div class="mistake-block"><strong>Mistake 3 — Not testing the gap closure</strong><p>After closing a gap, verify manually that the answer is correct. Count the overdue rows by hand. Compare to the visual. If they don't match, the DAX is wrong — not the expectation.</p></div>
+<div class="mistake-block"><strong>Mistake 4 — Building solutions to questions nobody asked</strong><p>Close gaps that answer real questions. Don't engineer elaborate solutions to hypothetical questions. Let the decision-maker's actual needs drive the engineering.</p></div>
+
+<div class="homework-block">
+  <div class="hw-label">Homework</div>
+  <p>Find one real unanswered question from your unit's work. Diagnose the gap. Close it. Build the visual. Present the answer.</p>
+  <p>This is the kind of work that earns credibility. A question people thought was unanswerable — now answered.</p>
+</div>
+
+<div class="summary-block">
+  <div class="sum-label">Lesson Summary</div>
+  <p>Before this lesson, some questions were unanswerable because the data didn't support them.</p>
+  <p>After this lesson, unanswerable questions are engineering problems with solutions.</p>
+  <p>You also learned Pattern #15: <strong>Close the Gap</strong>.</p>
+  <p>Diagnose the gap type. Apply the right tool. Answer the question that was impossible before.</p>
+  <p>In Lesson 16, you'll bring everything together — all fifteen patterns into one complete, published, presented dashboard that your unit actually uses.</p>
+</div>
+
+    </div>
+    <div class="lesson-nav-footer"><a href="/pattern_fluency/lessons/lesson-14.html" class="nav-btn">← Lesson 14</a><a href="/pattern_fluency/lessons/lesson-16.html" class="nav-btn primary">Lesson 16 →</a></div>
+  </main>
+</div>
+<script src="/pattern_fluency/js/main.js"></script>
+</body>
+</html>

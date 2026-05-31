@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 9: Make Two Spreadsheets Talk — Pattern Fluency</title>
+  <link rel="stylesheet" href="/pattern_fluency/css/style.css">
+  <link rel="stylesheet" href="/pattern_fluency/css/pattern-additions.css">
+</head>
+<body>
+<button class="mobile-toggle" id="mobile-toggle">☰</button>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="site-wrapper">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="/pattern_fluency/index.html" class="wordmark">Pattern Fluency</a>
+      <span class="sub">Power BI · Volume 2</span>
+    </div>
+    <div class="sidebar-nav">
+      <div class="nav-section"><div class="nav-section-label">Start Here</div></div>
+      <a href="/pattern_fluency/index.html" class="nav-link">Home</a>
+      <a href="/pattern_fluency/philosophy.html" class="nav-link">The Method</a>
+      <a href="/pattern_fluency/reference.html" class="nav-link">Quick Reference</a>
+      <a href="/pattern_fluency/pattern-library.html" class="nav-link">Pattern Library</a>
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 1 — Seeing Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-1.html" class="nav-link"><span class="num">01</span>Answer Your First Question</a>
+<a href="/pattern_fluency/lessons/lesson-2.html" class="nav-link"><span class="num">02</span>Different Pictures</a>
+<a href="/pattern_fluency/lessons/lesson-3.html" class="nav-link"><span class="num">03</span>Your Data Has a Shape</a>
+<a href="/pattern_fluency/lessons/lesson-4.html" class="nav-link"><span class="num">04</span>Filters Change the Question</a>
+<a href="/pattern_fluency/lessons/lesson-5.html" class="nav-link"><span class="num">05</span>One Number Tells a Story</a>
+<a href="/pattern_fluency/lessons/lesson-6.html" class="nav-link"><span class="num">06</span>Make It Yours</a>
+<a href="/pattern_fluency/lessons/lesson-7.html" class="nav-link"><span class="num">07</span>Share What You See</a>
+<a href="/pattern_fluency/lessons/lesson-8.html" class="nav-link"><span class="num">08</span>Capstone</a>
+
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 2 — Thinking in Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-9.html" class="nav-link active"><span class="num">09</span>Make Two Spreadsheets Talk</a>
+<a href="/pattern_fluency/lessons/lesson-10.html" class="nav-link"><span class="num">10</span>Patterns Over Time</a>
+<a href="/pattern_fluency/lessons/lesson-11.html" class="nav-link"><span class="num">11</span>Your First Calculation</a>
+<a href="/pattern_fluency/lessons/lesson-12.html" class="nav-link"><span class="num">12</span>Drill Down, Not Just Across</a>
+<a href="/pattern_fluency/lessons/lesson-13.html" class="nav-link"><span class="num">13</span>Design for One Person</a>
+<a href="/pattern_fluency/lessons/lesson-14.html" class="nav-link"><span class="num">14</span>Automate the Update</a>
+<a href="/pattern_fluency/lessons/lesson-15.html" class="nav-link"><span class="num">15</span>Answer the Unanswerable</a>
+<a href="/pattern_fluency/lessons/lesson-16.html" class="nav-link"><span class="num">16</span>Capstone — Build a Dashboard That Matters</a>
+
+    </div>
+    <div class="sidebar-footer">Pattern Fluency Method · v2.0</div>
+  </nav>
+  <main class="main-content">
+    <div class="topbar">
+      <div class="topbar-breadcrumb">Volume 2 <span>/ Lesson 9</span></div>
+      <div class="progress-indicator"><div class="progress-dot current"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div></div>
+    </div>
+    <div class="page-hero">
+      <div class="hero-eyebrow">Lesson 9 of 16 &nbsp;·&nbsp; Volume 2</div>
+      <h1>Make Two Spreadsheets Talk</h1>
+    </div>
+    <div class="belief-strip">
+  <div class="belief-card current">
+    <div class="belief-label">Before This Lesson</div>
+    <div class="belief-text">Data lives in separate places. I work with one spreadsheet at a time.</div>
+  </div>
+  <div class="belief-arrow">→</div>
+  <div class="belief-card target">
+    <div class="belief-label">After This Lesson</div>
+    <div class="belief-text">Data is a connected system. Two tables together can answer questions that neither can answer alone.</div>
+  </div>
+</div>
+    <div class="lesson-body">
+
+<h2>Welcome to Volume 2</h2>
+<p>Volume 1 taught you eight patterns for working with a single spreadsheet. You can import data, build charts, add cards, apply filters, design for a reader, and publish.</p>
+<p>Volume 2 starts with the most common problem real analysts hit: <strong>the answer requires more than one spreadsheet.</strong></p>
+<p>Your personnel data is in one file. Your training records are in another. Your budget is in a third. Each file answers part of the question. None of them answers it alone.</p>
+<p>Today you're going to make two spreadsheets talk to each other — and answer a question that neither could answer on its own.</p>
+
+<div class="coach-pause">
+  <div class="label">Pattern Review — Volume 1</div>
+  <p>Pattern #3 taught you to Read the Shape — to identify what a spreadsheet can and cannot answer before building anything.</p>
+  <p>Today you'll discover what happens when one spreadsheet's shape doesn't support your question but two together do. The answer was always there. It was just split across two files.</p>
+</div>
+
+<h2>Before We Open Power BI</h2>
+<p>Think about a question you've wanted to answer that required information from more than one place.</p>
+<p>Examples:</p>
+<p>"Which unit has the most people with incomplete training?" — requires personnel data AND training records.</p>
+<p>"Which department is over budget per person?" — requires budget data AND headcount data.</p>
+<p>Write your question down. Then identify the two data sources it needs.</p>
+
+<div class="stop-think">
+  <div class="label">The Key Concept — The Linking Column</div>
+  <p>Two spreadsheets can only talk to each other if they share a common column.</p>
+  <p>Think of it like this: if Spreadsheet A has a column called <strong>Unit</strong> and Spreadsheet B also has a column called <strong>Unit</strong>, Power BI can connect them — one row in A links to matching rows in B.</p>
+  <p>Before you try to connect two tables, find the column they share. That column is the bridge.</p>
+</div>
+
+<h2>Step 1 — Build Your Two Spreadsheets</h2>
+<p>For this lesson, create two simple Excel files.</p>
+
+<p><strong>File 1: Personnel.xlsx</strong></p>
+<table class="data-table">
+  <thead><tr><th>Name</th><th>Unit</th><th>Rank</th></tr></thead>
+  <tbody>
+    <tr><td>Smith</td><td>129</td><td>TSgt</td></tr>
+    <tr><td>Jones</td><td>144</td><td>MSgt</td></tr>
+    <tr><td>Brown</td><td>129</td><td>SSgt</td></tr>
+    <tr><td>Garcia</td><td>144</td><td>TSgt</td></tr>
+    <tr><td>Miller</td><td>129</td><td>MSgt</td></tr>
+  </tbody>
+</table>
+
+<p style="margin-top:16px;"><strong>File 2: Training.xlsx</strong></p>
+<table class="data-table">
+  <thead><tr><th>Name</th><th>Training</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td>Smith</td><td>Safety</td><td>Complete</td></tr>
+    <tr><td>Jones</td><td>Safety</td><td>Incomplete</td></tr>
+    <tr><td>Brown</td><td>Safety</td><td>Complete</td></tr>
+    <tr><td>Garcia</td><td>Safety</td><td>Complete</td></tr>
+    <tr><td>Miller</td><td>Safety</td><td>Incomplete</td></tr>
+  </tbody>
+</table>
+
+<p style="margin-top:12px;">The linking column is <strong>Name</strong>. It appears in both files. Power BI will use it as the bridge.</p>
+
+<h2>Step 2 — Import Both Files</h2>
+<div class="step-block">
+  <div class="step-header">Loading Two Sources</div>
+  <div class="step-content">
+    <p>Open Power BI Desktop.</p>
+    <p>Click <span class="step-action">Get Data</span> → <span class="step-action">Excel Workbook</span>.</p>
+    <p>Load <strong>Personnel.xlsx</strong>. Click <span class="step-action">Load</span>.</p>
+    <p>Now click <span class="step-action">Get Data</span> again.</p>
+    <p>Load <strong>Training.xlsx</strong>. Click <span class="step-action">Load</span>.</p>
+    <p>You now have two tables in Power BI. Look at the right side — you should see both listed.</p>
+  </div>
+</div>
+
+<h2>Step 3 — Create the Relationship</h2>
+<div class="step-block">
+  <div class="step-header">Making Them Talk</div>
+  <div class="step-content">
+    <p>At the top of the screen, find the <span class="step-action">Model</span> view icon on the left navigation bar. It looks like three connected shapes. Click it.</p>
+    <p>You should see two boxes — one for Personnel, one for Training.</p>
+    <p>Find the <strong>Name</strong> column in the Personnel table. Click and drag it to the <strong>Name</strong> column in the Training table.</p>
+    <p>A line appears connecting the two tables. That line is the relationship.</p>
+    <p>Click back to <span class="step-action">Report</span> view.</p>
+  </div>
+</div>
+
+<div class="stop-think">
+  <div class="label">If No Line Appeared</div>
+  <p>Check that both columns are named exactly the same — <strong>Name</strong> in both tables. Power BI is case-sensitive about column names in relationships. If one says "name" and the other says "Name," they won't connect automatically. Rename the column in one table to match.</p>
+</div>
+
+<div class="coach-pause">
+  <div class="label">What Just Happened</div>
+  <p>Power BI now knows that Smith in the Personnel table is the same person as Smith in the Training table. When you build a chart using columns from both tables, Power BI follows the relationship to combine the data correctly.</p>
+  <p>This is the moment your data stopped being two separate files and became one connected system.</p>
+</div>
+
+<h2>Step 4 — Build the Cross-Table Chart</h2>
+<div class="step-block">
+  <div class="step-header">Answering the Question</div>
+  <div class="step-content">
+    <p>Go to Report view. Click a blank area of the canvas. Select a bar chart.</p>
+    <p>In the X-axis box, place <strong>Unit</strong> from the Personnel table.</p>
+    <p>In the Y-axis box, place <strong>Name</strong> from the Personnel table (this counts people).</p>
+    <p>Now find <strong>Status</strong> from the Training table. Drag it to the <strong>Filters</strong> panel.</p>
+    <p>Check <strong>Incomplete</strong>.</p>
+    <p>Look at the chart. You are now seeing how many people per unit have incomplete training — a question that required two spreadsheets.</p>
+  </div>
+</div>
+
+<div class="coach-pause">
+  <div class="label">What You Just Learned</div>
+  <p>You may think you just learned how to create relationships.</p>
+  <p>You didn't.</p>
+  <p>You learned your ninth Pattern Fluency pattern.</p>
+  <p>When one spreadsheet can't answer the question, find the second spreadsheet it needs — and the column that connects them.</p>
+</div>
+
+<div class="pattern-card">
+  <div class="pattern-label">Pattern #9</div>
+  <h3>Connect the Tables</h3>
+  <p><strong>Question:</strong> What question requires more than one spreadsheet to answer?</p>
+  <p><strong>Recipe:</strong></p>
+  <ul>
+    <li>Write the question that needs two data sources.</li>
+    <li>Import both tables into Power BI.</li>
+    <li>Find the linking column — the column that appears in both tables.</li>
+    <li>In Model view, drag the linking column from one table to the other.</li>
+    <li>Build your chart using columns from both tables.</li>
+    <li>Answer the question that neither table could answer alone.</li>
+  </ul>
+  <p><strong>Example:</strong> Unit (Personnel) → X-axis. Name (Personnel) → Y-axis. Status = Incomplete (Training) → Filter. Result: incomplete training count by unit.</p>
+</div>
+
+<h2>Drill #9</h2>
+<div class="drill-block">
+  <div class="drill-header"><span class="icon">▶</span> The Connection Drill</div>
+  <p>Delete all visuals on the canvas.</p>
+  <p>Go to Model view. Remove the relationship line (right-click → Delete).</p>
+  <p>Rebuild the relationship: drag Name from Personnel to Name in Training.</p>
+  <p>Go back to Report view. Rebuild the cross-table chart using Pattern #9.</p>
+  <p>Delete and rebuild three times.</p>
+  <p>Each time, state out loud: "The linking column is ___ and it connects ___ to ___."</p>
+</div>
+
+<h2>Reflection</h2>
+<ul class="numbered-list">
+  <li><span class="n">01</span>What question did you answer that neither table could answer alone?</li>
+  <li><span class="n">02</span>What is the linking column — and why does it have to exist in both tables?</li>
+  <li><span class="n">03</span>What would happen if the Name column in one table had a typo? Would the relationship still work?</li>
+  <li><span class="n">04</span>What other questions could you answer now that both tables are connected?</li>
+  <li><span class="n">05</span>What third spreadsheet, if connected, would unlock even more questions?</li>
+</ul>
+
+<h2>Challenge</h2>
+<p>Using your own real data, identify two spreadsheets that share a common column.</p>
+<p>Import both into Power BI.</p>
+<p>Create the relationship using the linking column.</p>
+<p>Build one chart that uses columns from both tables.</p>
+<p>Answer a question that required both spreadsheets.</p>
+<p>Write the question before you build — not after.</p>
+
+<h2>Teach Back</h2>
+<p>Explain to your imaginary coworker what a relationship is and why it matters.</p>
+<p>Explain what a linking column is and how to find one.</p>
+<p>Explain Pattern #9 in plain language:</p>
+<p><strong>Find the question that needs two files. Find the column they share. Connect them. Answer the question.</strong></p>
+
+<h2>Common Mistakes</h2>
+<div class="mistake-block"><strong>Mistake 1 — Column names don't match exactly</strong><p>Power BI requires exact matches for relationship columns. "Unit Number" and "Unit_Number" are different. Check spelling, spacing, and capitalization before creating the relationship.</p></div>
+<div class="mistake-block"><strong>Mistake 2 — Building the chart before creating the relationship</strong><p>If you drag a column from Table B into a chart before connecting it to Table A, Power BI may not know how to combine them correctly. Build the relationship first. Build the chart second.</p></div>
+<div class="mistake-block"><strong>Mistake 3 — Using a non-unique linking column</strong><p>The best linking columns contain unique values — one row per person, one row per unit. If your linking column has duplicates in both tables, Power BI will create a many-to-many relationship that can produce incorrect counts. Use an ID column when possible.</p></div>
+<div class="mistake-block"><strong>Mistake 4 — Forgetting which table a column came from</strong><p>When you have two tables, Power BI lists all columns from both. Hover over a field name to see which table it belongs to. Always know whether you're dragging from Personnel or Training — it matters.</p></div>
+
+<div class="homework-block">
+  <div class="hw-label">Homework</div>
+  <p>Find two real spreadsheets from your work that share a common column.</p>
+  <p>Write the question that requires both files to answer.</p>
+  <p>Import both into Power BI, create the relationship, and build the chart.</p>
+  <p>Save the file. You'll use connected tables in every remaining lesson.</p>
+</div>
+
+<div class="summary-block">
+  <div class="sum-label">Lesson Summary</div>
+  <p>Before this lesson, your data lived in separate places.</p>
+  <p>After this lesson, your data is a connected system — and you can answer questions that no single spreadsheet could support.</p>
+  <p>You also learned Pattern #9: <strong>Connect the Tables</strong>.</p>
+  <p>Find the linking column. Create the relationship. Answer the cross-table question.</p>
+  <p>In Lesson 10, you'll add the dimension of time — and discover that data over time tells a story that snapshots hide.</p>
+</div>
+
+    </div>
+    <div class="lesson-nav-footer"><a href="/pattern_fluency/lessons/lesson-8.html" class="nav-btn">← Lesson 8</a><a href="/pattern_fluency/lessons/lesson-10.html" class="nav-btn primary">Lesson 10 →</a></div>
+  </main>
+</div>
+<script src="/pattern_fluency/js/main.js"></script>
+</body>
+</html>

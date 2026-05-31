@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 12: Drill Down, Not Just Across — Pattern Fluency</title>
+  <link rel="stylesheet" href="/pattern_fluency/css/style.css">
+  <link rel="stylesheet" href="/pattern_fluency/css/pattern-additions.css">
+</head>
+<body>
+<button class="mobile-toggle" id="mobile-toggle">☰</button>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="site-wrapper">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="/pattern_fluency/index.html" class="wordmark">Pattern Fluency</a>
+      <span class="sub">Power BI · Volume 2</span>
+    </div>
+    <div class="sidebar-nav">
+      <div class="nav-section"><div class="nav-section-label">Start Here</div></div>
+      <a href="/pattern_fluency/index.html" class="nav-link">Home</a>
+      <a href="/pattern_fluency/philosophy.html" class="nav-link">The Method</a>
+      <a href="/pattern_fluency/reference.html" class="nav-link">Quick Reference</a>
+      <a href="/pattern_fluency/pattern-library.html" class="nav-link">Pattern Library</a>
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 1 — Seeing Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-1.html" class="nav-link"><span class="num">01</span>Answer Your First Question</a>
+<a href="/pattern_fluency/lessons/lesson-2.html" class="nav-link"><span class="num">02</span>Different Pictures</a>
+<a href="/pattern_fluency/lessons/lesson-3.html" class="nav-link"><span class="num">03</span>Your Data Has a Shape</a>
+<a href="/pattern_fluency/lessons/lesson-4.html" class="nav-link"><span class="num">04</span>Filters Change the Question</a>
+<a href="/pattern_fluency/lessons/lesson-5.html" class="nav-link"><span class="num">05</span>One Number Tells a Story</a>
+<a href="/pattern_fluency/lessons/lesson-6.html" class="nav-link"><span class="num">06</span>Make It Yours</a>
+<a href="/pattern_fluency/lessons/lesson-7.html" class="nav-link"><span class="num">07</span>Share What You See</a>
+<a href="/pattern_fluency/lessons/lesson-8.html" class="nav-link"><span class="num">08</span>Capstone</a>
+
+      <div class="nav-section" style="margin-top:12px;"><div class="nav-section-label">Volume 2 — Thinking in Data</div></div>
+      <a href="/pattern_fluency/lessons/lesson-9.html" class="nav-link"><span class="num">09</span>Make Two Spreadsheets Talk</a>
+<a href="/pattern_fluency/lessons/lesson-10.html" class="nav-link"><span class="num">10</span>Patterns Over Time</a>
+<a href="/pattern_fluency/lessons/lesson-11.html" class="nav-link"><span class="num">11</span>Your First Calculation</a>
+<a href="/pattern_fluency/lessons/lesson-12.html" class="nav-link active"><span class="num">12</span>Drill Down, Not Just Across</a>
+<a href="/pattern_fluency/lessons/lesson-13.html" class="nav-link"><span class="num">13</span>Design for One Person</a>
+<a href="/pattern_fluency/lessons/lesson-14.html" class="nav-link"><span class="num">14</span>Automate the Update</a>
+<a href="/pattern_fluency/lessons/lesson-15.html" class="nav-link"><span class="num">15</span>Answer the Unanswerable</a>
+<a href="/pattern_fluency/lessons/lesson-16.html" class="nav-link"><span class="num">16</span>Capstone — Build a Dashboard That Matters</a>
+
+    </div>
+    <div class="sidebar-footer">Pattern Fluency Method · v2.0</div>
+  </nav>
+  <main class="main-content">
+    <div class="topbar">
+      <div class="topbar-breadcrumb">Volume 2 <span>/ Lesson 12</span></div>
+      <div class="progress-indicator"><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot current"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div></div>
+    </div>
+    <div class="page-hero">
+      <div class="hero-eyebrow">Lesson 12 of 16 &nbsp;·&nbsp; Volume 2</div>
+      <h1>Drill Down, Not Just Across</h1>
+    </div>
+    <div class="belief-strip">
+  <div class="belief-card current">
+    <div class="belief-label">Before This Lesson</div>
+    <div class="belief-text">Charts show one level of detail. If I want more, I build another chart.</div>
+  </div>
+  <div class="belief-arrow">→</div>
+  <div class="belief-card target">
+    <div class="belief-label">After This Lesson</div>
+    <div class="belief-text">Charts can reveal layers. One chart can answer the summary question and the follow-up question.</div>
+  </div>
+</div>
+    <div class="lesson-body">
+
+<h2>Welcome Back</h2>
+<p>Lesson 11 taught you to calculate numbers that don't exist in the data yet. Now you have measures. You have trends. You have connected tables.</p>
+<p>Today you'll learn to go deeper into the data without building more charts.</p>
+<p>Most reports show summary numbers. But the most useful questions often start with a summary and then ask: <strong>why?</strong> What's driving this number? Which specific part of the group is pulling the average down?</p>
+<p>In Power BI, you answer those questions by drilling down.</p>
+
+<div class="coach-pause">
+  <div class="label">Pattern Review</div>
+  <p>Pattern #4 (Filter = New Question) taught you to focus on one part of the data. Drilling down is similar — but instead of filtering before you look, you explore layers after you see the summary. You start broad and let the data guide you to the detail.</p>
+</div>
+
+<h2>Before We Open Power BI</h2>
+<p>Think about a summary number that made you want to ask a follow-up question.</p>
+<p>"Unit 129 has 40% incomplete training" — but which ranks? Which specific training? When did it happen?</p>
+<p>That follow-up question is the drill-down.</p>
+<p>Write your summary question and your follow-up question before opening Power BI.</p>
+
+<h2>Step 1 — Build a Hierarchy</h2>
+<p>A hierarchy is a set of levels you can drill through — from broad to specific.</p>
+<p>Example: Year → Month → Week. Or: Wing → Unit → Person. Or: Category → Subcategory → Item.</p>
+
+<div class="step-block">
+  <div class="step-header">Creating a Hierarchy in the Field List</div>
+  <div class="step-content">
+    <p>In the field list on the right, find a field you want to be the top level. For example, <strong>Unit</strong>.</p>
+    <p>Right-click <strong>Unit</strong> → <span class="step-action">Create hierarchy</span>.</p>
+    <p>A new item appears: "Unit Hierarchy."</p>
+    <p>Now find the next level field — for example, <strong>Rank</strong>. Right-click it → <span class="step-action">Add to hierarchy</span> → select "Unit Hierarchy."</p>
+    <p>You now have a two-level hierarchy: Unit → Rank.</p>
+    <p>Drag this hierarchy to the <strong>X-axis</strong> of a bar chart. Add Name (Count) to the Y-axis.</p>
+  </div>
+</div>
+
+<h2>Step 2 — Drill Down</h2>
+<div class="step-block">
+  <div class="step-header">Going Deeper</div>
+  <div class="step-content">
+    <p>Look at the chart. You should see a summary at the Unit level.</p>
+    <p>At the top right of the chart, find the drill-down controls — small arrows pointing up and down.</p>
+    <p>Click the <span class="step-action">↓</span> (drill down) button to enable drill mode.</p>
+    <p>Now click on a specific bar — for example, Unit 129.</p>
+    <p>The chart changes to show Unit 129 broken down by Rank.</p>
+    <p>You just drilled from Wing level to Rank level with one click.</p>
+    <p>Click the <span class="step-action">↑</span> (drill up) button to return to the summary view.</p>
+  </div>
+</div>
+
+<div class="stop-think">
+  <div class="label">If the Drill Controls Don't Appear</div>
+  <p>Hover your mouse over the chart. The drill controls appear in the top right corner — small arrow icons. If you still don't see them, click on the chart first to select it. The controls only show when the chart is selected and has a hierarchy on the axis.</p>
+</div>
+
+<div class="coach-pause">
+  <div class="label">What Just Happened</div>
+  <p>You answered two questions using one chart. The first question was at the Unit level — which unit has the most people? The second question was at the Rank level — within that unit, how are they distributed by rank?</p>
+  <p>You didn't build a second chart. You drilled into the first one.</p>
+</div>
+
+<div class="coach-pause">
+  <div class="label">What You Just Learned</div>
+  <p>You may think you just learned how to drill down. You didn't. You learned your twelfth Pattern Fluency pattern. When a summary number raises a follow-up question, build a hierarchy and drill. The chart becomes a tool for exploration, not just display.</p>
+</div>
+
+<div class="pattern-card">
+  <div class="pattern-label">Pattern #12</div>
+  <h3>Drill to the Detail</h3>
+  <p><strong>Question:</strong> What's hiding underneath the summary number?</p>
+  <p><strong>Recipe:</strong></p>
+  <ul>
+    <li>Write the summary question and the follow-up question.</li>
+    <li>Create a hierarchy in the field list: right-click the top-level field → Create hierarchy → add sub-levels.</li>
+    <li>Drag the hierarchy to the X-axis.</li>
+    <li>Enable drill mode using the arrow controls on the chart.</li>
+    <li>Click a specific bar to drill down into that category.</li>
+    <li>Click the up arrow to return to the summary.</li>
+  </ul>
+  <p><strong>Example:</strong> Unit hierarchy → click Unit 129 → see breakdown by Rank. Click the up arrow → return to all units.</p>
+</div>
+
+<h2>Drill #12</h2>
+<div class="drill-block">
+  <div class="drill-header"><span class="icon">▶</span> The Exploration Drill</div>
+  <p>Build your hierarchy chart. Start at the summary level.</p>
+  <p>State out loud: "At this level, the question is ___."</p>
+  <p>Drill down into one bar. State out loud: "At this level, the question is ___."</p>
+  <p>Drill back up. State the summary question again.</p>
+  <p>Drill into a different bar. State the question at the detail level.</p>
+  <p>Repeat three times with different starting bars. Each time, state the question — because each bar is a different focused question.</p>
+</div>
+
+<h2>Reflection</h2>
+<ul class="numbered-list">
+  <li><span class="n">01</span>What was the summary question? What was the follow-up question?</li>
+  <li><span class="n">02</span>Did drilling down reveal anything surprising in your data?</li>
+  <li><span class="n">03</span>When would you use drill-down instead of Pattern #4 (Filter = New Question)?</li>
+  <li><span class="n">04</span>What third level could you add to your hierarchy to go even deeper?</li>
+  <li><span class="n">05</span>Which level of detail is most useful for your audience — and does the right level depend on who's asking?</li>
+</ul>
+
+<h2>Challenge</h2>
+<p>Using your own data, create a three-level hierarchy.</p>
+<p>Write the question at each level before you build anything:</p>
+<p>Level 1 question: ___. Level 2 question: ___. Level 3 question: ___.</p>
+<p>Build the chart. Drill through all three levels.</p>
+<p>Show it to one person. Let them drill themselves. Ask: "What did you discover that surprised you?"</p>
+
+<h2>Teach Back</h2>
+<p>Explain what a hierarchy is and why it's useful.</p>
+<p>Explain the difference between drilling down and filtering.</p>
+<p>Explain Pattern #12 in plain language:</p>
+<p><strong>When a summary number raises a follow-up question, build a hierarchy and let the reader explore the detail without leaving the chart.</strong></p>
+
+<h2>Common Mistakes</h2>
+<div class="mistake-block"><strong>Mistake 1 — Building a new chart for every level</strong><p>Some analysts build a separate chart for each level of detail — one for units, one for ranks, one for individuals. That's the old way. Hierarchies and drill-down replace all three with one interactive chart.</p></div>
+<div class="mistake-block"><strong>Mistake 2 — Forgetting to enable drill mode</strong><p>Clicking a bar without enabling drill mode selects and filters the chart — it doesn't drill down. You must click the drill arrow first, then click the bar. The order matters.</p></div>
+<div class="mistake-block"><strong>Mistake 3 — Too many hierarchy levels</strong><p>Three levels is the practical maximum for most audiences. Beyond that, the exploration becomes exhausting rather than useful. Know which levels your audience actually needs.</p></div>
+<div class="mistake-block"><strong>Mistake 4 — Using drill-down when filtering is better</strong><p>If your audience only ever needs to see one level — for example, always rank-level, never unit-level — a hierarchy is unnecessary complexity. Use Pattern #4 (Filter = New Question) instead.</p></div>
+
+<div class="homework-block">
+  <div class="hw-label">Homework</div>
+  <p>Find a real question in your work that has a natural summary level and a detail level.</p>
+  <p>Build a hierarchy and a drill-down chart for it.</p>
+  <p>Show it to your supervisor or a coworker. Let them explore. Write down what they discovered.</p>
+</div>
+
+<div class="summary-block">
+  <div class="sum-label">Lesson Summary</div>
+  <p>Before this lesson, charts showed one level of detail.</p>
+  <p>After this lesson, charts are exploration tools — a reader can move from summary to detail and back with one click.</p>
+  <p>You also learned Pattern #12: <strong>Drill to the Detail</strong>.</p>
+  <p>Build a hierarchy. Enable drill mode. Click to explore. Let the data guide the follow-up question.</p>
+  <p>In Lesson 13, you'll design a complete report for one specific person — applying everything you've learned to a real audience and a real decision.</p>
+</div>
+
+    </div>
+    <div class="lesson-nav-footer"><a href="/pattern_fluency/lessons/lesson-11.html" class="nav-btn">← Lesson 11</a><a href="/pattern_fluency/lessons/lesson-13.html" class="nav-btn primary">Lesson 13 →</a></div>
+  </main>
+</div>
+<script src="/pattern_fluency/js/main.js"></script>
+</body>
+</html>
